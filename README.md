@@ -1,6 +1,44 @@
-# Cursos — Asllan Maciel
+# PHP: do zero ao produto
 
-Pasta soberana dos cursos da plataforma `cursos.asllanmaciel.com.br`.
+Estudos de PHP acompanhando os cursos **PHPIAN** (fundamentos) e **PHPAN**
+(intermediário) da plataforma [cursos.asllanmaciel.com.br](https://cursos.asllanmaciel.com.br),
+de Asllan Maciel.
+
+O fio condutor:
+
+> No PHPIAN você aprende a **fazer funcionar**.
+> No PHPAN você aprende a **fazer aguentar** — mudança, usuário, tempo e outra
+> pessoa mexendo no código.
+
+## O que tem aqui
+
+| Pasta | O que é |
+|---|---|
+| [PHPIAN/](PHPIAN/) | fundamentos, com o `mini-crm` preservado como registro do ponto de partida |
+| [PHPAN/](PHPAN/) | 47 aulas (`.php` que roda + `.md` que explica) e o **`crm-produto`**, o projeto |
+| [SINTESE-PHPIAN-PHPAN.md](SINTESE-PHPIAN-PHPAN.md) | mapa mental e a interseção entre os dois cursos |
+
+## O projeto
+
+[`PHPAN/crm-produto`](PHPAN/crm-produto) é o `mini-crm` do PHPIAN reescrito ao longo
+de 8 módulos: domínio tipado, MVC próprio sem framework, API v1 versionada,
+autenticação por sessão e token, papéis, filas com worker, migrações, backup e
+webhook de pagamento.
+
+```bash
+cd PHPAN/crm-produto
+composer install
+composer quality   # PHP-CS-Fixer + PHPStan level 5 + 137 testes + composer audit
+```
+
+## Sobre o conteúdo
+
+As anotações em `.md` são **minhas**, escritas com minhas palavras para registrar o
+raciocínio por trás de cada decisão. Os exercícios e exemplos de código seguem o
+material dos cursos, cujo crédito é do autor — se você quer aprender isso a sério,
+faça os cursos. Este repositório é o meu caderno, não um substituto deles.
+
+---
 
 | Curso  | Nível         | Situação          | Acesso até |
 |--------|---------------|-------------------|------------|
