@@ -10,7 +10,7 @@
 
 ```bash
 docker start crm-mysql                    # banco (os dados ficam salvos)
-cd ~/Documentos/Cursos/PHPAN/crm-produto
+cd ~/Documentos/php-do-zero-ao-produto/PHPAN/crm-produto
 php -S localhost:8080 -t public           # painel + API
 php bin/worker.php                        # fila, em outro terminal
 ```
