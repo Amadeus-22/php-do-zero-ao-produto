@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cursos.asllanmaciel.com.br/phpian/aulas.schema.json",
+  "title": "Índice de aulas do PHPIAN",
+  "description": "Metadado e conteúdo das aulas do PHPIAN, extraído do HTML da plataforma por bin/importar-aula.php. A lógica é a do PHPIAN, não a do PHPAN: a aula é identificada por 'modulo-numero' (o fragmento #M-N da URL), tem duração em minutos, e os arquivos .php do repositório são exercícios do módulo — não existe um .php por aula nem um .md por aula.",
+  "type": "object",
+  "required": ["curso", "modulos", "aulas"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "curso": {
+      "type": "object",
+      "required": ["id", "nome", "nivel", "base_url", "total_modulos", "total_aulas"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "const": "phpian" },
+        "nome": { "type": "string" },
+        "nivel": { "type": "string" },
+        "plataforma": { "type": "string" },
+        "base_url": { "type": "string", "description": "A aula é um fragmento desta URL: base_url + '#' + id." },
+        "total_modulos": { "type": "integer", "minimum": 1 },
+        "total_aulas": { "type": "integer", "minimum": 1 },
+        "situacao": { "type": "string" },
+        "acesso_ate": { "type": "string", "format": "date" },
+        "projeto_final": { "type": ["string", "null"], "description": "Pasta do Mini CRM, entregue no Módulo 8." }
+      }
+    },
+    "modulos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["numero", "titulo", "aulas"],
+        "additionalProperties": false,
+        "properties": {
+          "numero": { "type": "integer", "minimum": 1 },
+          "titulo": { "type": ["string", "null"] },
+          "pasta": { "type": ["string", "null"], "description": "Pasta no repositório. O Módulo 8 usa 'Modulo_8(modeagem_final)'." },
+          "aulas": { "type": "integer", "minimum": 0 },
+          "arquivos": {
+            "type": "array",
+            "description": "Exercícios .php do módulo, na ordem em que foram escritos.",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "aulas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "modulo", "numero", "titulo", "url", "duracao_min", "resumo", "secoes", "codigo", "callouts", "pratica", "navegacao", "arquivos", "pratica_arquivo"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[0-9]+-[0-9]+$", "description": "O fragmento da plataforma: '2-3' é a Aula 3 do Módulo 2." },
+          "modulo": { "type": "integer", "minimum": 1 },
+          "numero": { "type": "integer", "minimum": 1 },
+          "titulo": { "type": "string" },
+          "url": { "type": "string" },
+          "duracao_min": { "type": ["integer", "null"], "description": "Do eyebrow da página: 'Módulo 2 · 16 min'." },
+          "resumo": { "type": ["string", "null"], "description": "Primeiro parágrafo do corpo, antes de qualquer h2." },
+          "secoes": {
+            "type": "array",
+            "description": "Os h2 e h3 da aula, com os parágrafos e listas que vêm sob cada um. titulo null = bloco solto, fora de seção.",
+            "items": {
+              "type": "object",
+              "required": ["titulo", "nivel", "paragrafos", "itens"],
+              "additionalProperties": false,
+              "properties": {
+                "titulo": { "type": ["string", "null"] },
+                "nivel": { "enum": [2, 3, null], "description": "2 para h2, 3 para h3 (subtítulo que pende do h2 anterior), null para bloco solto." },
+                "paragrafos": { "type": "array", "items": { "type": "string" } },
+                "itens": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          },
+          "codigo": {
+            "type": "array",
+            "description": "Blocos <pre class=\"code-block\">, já com as entidades HTML resolvidas — o código como o aluno copia.",
+            "items": {
+              "type": "object",
+              "required": ["aula_secao", "conteudo"],
+              "additionalProperties": false,
+              "properties": {
+                "aula_secao": { "type": ["string", "null"], "description": "h2 sob o qual o bloco apareceu, ou null." },
+                "conteudo": { "type": "string" }
+              }
+            }
+          },
+          "callouts": {
+            "type": "array",
+            "description": "Caixas de destaque. 'aviso' vem de class=\"callout warn\"; 'nota' do callout simples.",
+            "items": {
+              "type": "object",
+              "required": ["tipo", "titulo", "texto"],
+              "additionalProperties": false,
+              "properties": {
+                "tipo": { "enum": ["nota", "aviso"] },
+                "titulo": { "type": ["string", "null"] },
+                "texto": { "type": "string" }
+              }
+            }
+          },
+          "pratica": { "type": ["string", "null"], "description": "O bloco .practice — o exercício que a aula pede." },
+          "pratica_arquivo": { "type": ["string", "null"], "description": "O arquivo em praticas/ que RESOLVE a prática e se verifica sozinho. Distinto de 'arquivos', que aponta o exercício original do repositório — transcrição do código da aula, não a prática." },
+          "navegacao": {
+            "type": "object",
+            "required": ["anterior", "proxima"],
+            "additionalProperties": false,
+            "properties": {
+              "anterior": { "type": ["string", "null"], "pattern": "^[0-9]+-[0-9]+$" },
+              "proxima": { "type": ["string", "null"], "pattern": "^[0-9]+-[0-9]+$" }
+            }
+          },
+          "arquivos": {
+            "type": "array",
+            "description": "Exercícios do repositório que correspondem a esta aula. Preenchido à mão; o importador nunca sobrescreve.",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

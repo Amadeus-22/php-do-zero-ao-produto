@@ -1,0 +1,21 @@
+
+#Comemçar o projeto
+
+composer init
+composer require vlucas/phpdotenv
+composer dump-autoload
+#composer.json, pasta vendor/ e o autoload
+
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+// exemplo: carregar .env (se instalou phpdotenv)
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+
+#O que memorizar
+
+    composer.json — lista de pacotes
+    vendor/ — código baixado (não versionar)
+    composer install — reinstala a partir do lock (em outra máquina)
+    Autoload PSR-4 — carrega classes sem require manual

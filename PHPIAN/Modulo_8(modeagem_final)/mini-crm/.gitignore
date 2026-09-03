@@ -1,0 +1,7 @@
+# Configuração real (contém senha do banco) — NUNCA versionar
+/config/app.php
+
+# Lixo de ambiente
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,23 @@
+# navegando no projeto 
+cd seu-projeto
+git init
+git add .
+git commit -m "Primeira versão do contato"
+
+# no GitHub: crie repositório vazio, depois:
+git remote add origin https://github.com/SEU_USER/phpian-contato.git
+git branch -M main
+git push -u origin main
+
+# essencial de gitignore 
+
+/vendor/
+.env
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+mensagens.txt
+info.php
+
+# Obs = NUNCA SUBIR SENHAS, env uploads de usuários ou 
+info.php.
+

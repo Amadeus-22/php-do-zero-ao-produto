@@ -1,0 +1,17 @@
+
+CREATE TABLE tags (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(60) NOT NULL UNIQUE
+);
+
+CREATE TABLE contato_tag (
+  contato_id INT UNSIGNED NOT NULL,
+  tag_id INT UNSIGNED NOT NULL,
+  PRIMARY KEY (contato_id, tag_id)
+); 
+
+SELECT c.nome, t.nome AS tag
+FROM contatos c
+JOIN contato_tag ct ON ct.contato_id = c.id
+JOIN tags t ON t.id = ct.tag_id
+WHERE c.id = ?;

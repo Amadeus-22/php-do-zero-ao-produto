@@ -1,0 +1,10 @@
+projeto/
+  public/          ← DocumentRoot
+    index.php
+    assets/
+  src/             ← código PHP
+  templates/
+  config/
+    app.php
+  storage/
+    uploads/

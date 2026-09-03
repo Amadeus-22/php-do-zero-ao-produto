@@ -1,0 +1,19 @@
+# Dependências (geradas por composer install)
+vendor/
+
+# Ambiente e segredos — NUNCA versionar
+.env
+.env.*
+!.env.example
+
+# Gerado em tempo de execução
+var/
+storage/anexos/*
+!storage/anexos/.gitignore
+*.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+
+# Sistema
+.DS_Store
+Thumbs.db

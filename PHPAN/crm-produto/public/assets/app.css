@@ -1,0 +1,12 @@
+:root { color-scheme: light dark; --linha: #8883; }
+body { margin: 0; font: 15px/1.5 system-ui, sans-serif; }
+.container { max-width: 60rem; margin: 0 auto; padding: 1.5rem; }
+.nav { display: flex; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid var(--linha); }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+th, td { text-align: left; padding: .5rem; border-bottom: 1px solid var(--linha); }
+label { display: block; margin: .75rem 0 .25rem; }
+input { padding: .5rem; min-width: 18rem; }
+.erro { color: #c0392b; margin: .25rem 0; }
+.flash { padding: .75rem 1.5rem; }
+.flash--sucesso { background: #2ecc7133; }
+.flash--erro { background: #e74c3c33; }

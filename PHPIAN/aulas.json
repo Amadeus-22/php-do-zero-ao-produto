@@ -1,0 +1,1760 @@
+{
+    "$schema": "./aulas.schema.json",
+    "curso": {
+        "id": "phpian",
+        "nome": "PHPIAN — Iniciante",
+        "nivel": "Iniciante",
+        "plataforma": "cursos.asllanmaciel.com.br",
+        "base_url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php",
+        "total_modulos": 8,
+        "total_aulas": 40,
+        "situacao": "concluído",
+        "acesso_ate": "2027-08-03",
+        "projeto_final": "Modulo_8(modeagem_final)/mini-crm"
+    },
+    "modulos": [
+        {
+            "numero": 1,
+            "titulo": null,
+            "pasta": "Modulo_1",
+            "aulas": 5,
+            "arquivos": [
+                "Modulo_1/Hello_world.php",
+                "Modulo_1/variaveis.php"
+            ]
+        },
+        {
+            "numero": 2,
+            "titulo": null,
+            "pasta": "Modulo_2",
+            "aulas": 5,
+            "arquivos": [
+                "Modulo_2/catch.php",
+                "Modulo_2/condicionais.php",
+                "Modulo_2/funcoes.php",
+                "Modulo_2/loops.php",
+                "Modulo_2/operadores.php"
+            ]
+        },
+        {
+            "numero": 3,
+            "titulo": null,
+            "pasta": "Modulo_3",
+            "aulas": 5,
+            "arquivos": [
+                "Modulo_3/arrays_indexados_associativos.php",
+                "Modulo_3/funcoes_de_array.php",
+                "Modulo_3/json_dados_para_front_apis.php",
+                "Modulo_3/manipulacao_de_strings.php",
+                "Modulo_3/numeros e datas.php"
+            ]
+        },
+        {
+            "numero": 4,
+            "titulo": null,
+            "pasta": "Modulo_4",
+            "aulas": 5,
+            "arquivos": [
+                "Modulo_4/get_post_formularios.php",
+                "Modulo_4/projeto_relampago.php",
+                "Modulo_4/request_response.php",
+                "Modulo_4/upload_de_arquivos.php",
+                "Modulo_4/validacao_sanitizacao.php"
+            ]
+        },
+        {
+            "numero": 5,
+            "titulo": null,
+            "pasta": "Modulo_5",
+            "aulas": 6,
+            "arquivos": [
+                "Modulo_5/classe_objetos(intro).php",
+                "Modulo_5/include_require_partials.php"
+            ]
+        },
+        {
+            "numero": 6,
+            "titulo": null,
+            "pasta": "Modulo_6",
+            "aulas": 5,
+            "arquivos": [
+                "Modulo_6/INSERT_UPDATE_DELETE.php",
+                "Modulo_6/SELECT_prepared_statements.php",
+                "Modulo_6/conexão_PDO_segura.php"
+            ]
+        },
+        {
+            "numero": 7,
+            "titulo": null,
+            "pasta": "Modulo_7",
+            "aulas": 4,
+            "arquivos": [
+                "Modulo_7/autentificação_simples.php",
+                "Modulo_7/hash_de_senhas.php",
+                "Modulo_7/segurança_web_essencial.php",
+                "Modulo_7/sessions_cookies.php"
+            ]
+        },
+        {
+            "numero": 8,
+            "titulo": null,
+            "pasta": "Modulo_8(modeagem_final)",
+            "aulas": 5,
+            "arquivos": []
+        }
+    ],
+    "aulas": [
+        {
+            "id": "1-1",
+            "modulo": 1,
+            "numero": 1,
+            "titulo": "PHP moderno no mapa da web",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#1-1",
+            "duracao_min": 14,
+            "resumo": "PHP é uma linguagem server-side: o código roda no servidor e o navegador recebe HTML (ou JSON). O visitante não vê o código-fonte PHP — só o resultado.",
+            "secoes": [
+                {
+                    "titulo": "O fluxo em 4 passos",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "O usuário pede uma URL (ex.: /contato.php).",
+                        "O servidor (Apache/Nginx) entrega a requisição ao PHP.",
+                        "O PHP processa, consulta banco, monta a resposta.",
+                        "O navegador renderiza o HTML gerado."
+                    ]
+                },
+                {
+                    "titulo": "O que é “moderno” neste curso",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "PHP 8.2+ (ideal 8.3): tipagem, match, named arguments, melhor performance",
+                        "PDO com prepared statements (nada de mysql_* antigo)",
+                        "password_hash, CSRF, escape XSS",
+                        "Estrutura de pastas profissional, mesmo sem framework",
+                        "Ferramentas atuais: IDE com IA, terminal, Git básico"
+                    ]
+                }
+            ],
+            "codigo": [],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Meta do curso",
+                    "texto": "No final você terá um Mini CRM rodando em localhost e, se quiser, publicado online (recomendamos HostGator)."
+                }
+            ],
+            "pratica": "Anote em uma frase: “Quero publicar um sistema PHP que faz ___.” Isso vira seu norte até o projeto final.",
+            "navegacao": {
+                "anterior": null,
+                "proxima": "1-2"
+            },
+            "arquivos": [],
+            "pratica_arquivo": "praticas/1-1-norte-do-curso.php"
+        },
+        {
+            "id": "1-2",
+            "modulo": 1,
+            "numero": 2,
+            "titulo": "Passo a passo: do zero ao localhost",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#1-2",
+            "duracao_min": 25,
+            "resumo": "Siga na ordem. Não pule etapas — o objetivo é ver a primeira página PHP abrindo no navegador.",
+            "secoes": [
+                {
+                    "titulo": "Passo 1 — Instalar o ambiente (Windows)",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Baixe e instale o Laragon (recomendado) ou o XAMPP.",
+                        "Abra o painel e clique em Start All (Apache + MySQL).",
+                        "Abra o terminal (PowerShell ou o terminal do Laragon).",
+                        "Digite php -v. Precisa aparecer PHP 8.2 ou superior."
+                    ]
+                },
+                {
+                    "titulo": "Passo 2 — Criar a pasta do projeto",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "No Laragon: pasta www (atalho no painel).",
+                        "No XAMPP: pasta htdocs.",
+                        "Crie a pasta phpian-aula dentro dela."
+                    ]
+                },
+                {
+                    "titulo": "Passo 3 — Arquivo de teste",
+                    "nivel": 2,
+                    "paragrafos": [
+                        "Crie info.php com:",
+                        "Abra no navegador:",
+                        "Se aparecer a página azul/cinza de configuração do PHP, localhost está ok."
+                    ],
+                    "itens": []
+                },
+                {
+                    "titulo": "Passo 4 — Checklist rápido",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "✓ Apache/Nginx rodando",
+                        "✓ php -v ≥ 8.2",
+                        "✓ Pasta do projeto acessível via localhost",
+                        "✓ info.php testado e removido"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": "Passo 3 — Arquivo de teste",
+                    "conteudo": "<?php\nphpinfo();"
+                },
+                {
+                    "aula_secao": "Passo 3 — Arquivo de teste",
+                    "conteudo": "http://localhost/phpian-aula/info.php"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "aviso",
+                    "titulo": "Se php -v falhar",
+                    "texto": "Reinicie o terminal depois da instalação. No Laragon, use “Terminal” do próprio painel — o PATH já vem certo."
+                },
+                {
+                    "tipo": "aviso",
+                    "titulo": "Segurança",
+                    "texto": "Apague info.php assim que confirmar. Em produção ele expõe demais."
+                }
+            ],
+            "pratica": "Tire um print (só pra você) da saída de php -v e da URL do localhost funcionando. Esse é o seu “ambiente verde”.",
+            "navegacao": {
+                "anterior": "1-1",
+                "proxima": "1-3"
+            },
+            "arquivos": [],
+            "pratica_arquivo": "praticas/1-2-ambiente-verde.php"
+        },
+        {
+            "id": "1-3",
+            "modulo": 1,
+            "numero": 3,
+            "titulo": "IDE, Cursor e IA como copiloto",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#1-3",
+            "duracao_min": 20,
+            "resumo": "Você não precisa memorizar tudo. Precisa entender, editar com confiança e usar IA como acelerador — não como piloto automático cego.",
+            "secoes": [
+                {
+                    "titulo": "Escolha de IDE (recomendado)",
+                    "nivel": 2,
+                    "paragrafos": [
+                        "Neste curso, Cursor ou VS Code bastam."
+                    ],
+                    "itens": [
+                        "Cursor — editor moderno com IA integrada (ótimo para aprender e corrigir código).",
+                        "VS Code — clássico, leve; combine com extensões PHP e, se quiser, GitHub Copilot.",
+                        "PhpStorm — mais pesado/pago; excelente se for viver de PHP."
+                    ]
+                },
+                {
+                    "titulo": "Extensões úteis",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "PHP Intelephense (autocompletar e erros)",
+                        "Error Lens (erros inline)",
+                        "EditorConfig / Prettier (formatação)"
+                    ]
+                },
+                {
+                    "titulo": "Como usar IA do jeito certo",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Peça explicação do código que você não entendeu — não só “faz pra mim”.",
+                        "Cole o erro completo (mensagem + trecho) e peça o porquê + o fix.",
+                        "Revise sempre: IA erra caminhos, versões antigas e segurança.",
+                        "Peça versão PHP 8.3 explicitamente nos prompts."
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": "Como usar IA do jeito certo",
+                    "conteudo": "Prompt exemplo:\n\"Estou no PHP 8.3 com Laragon. Este erro aconteceu ao abrir contato.php.\nExplique a causa em português e me dê o trecho corrigido, sem mysql_* antigo.\""
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Regra de ouro",
+                    "texto": "Se você não consegue explicar o que o código faz em voz alta, ainda não aprendeu — só copiou. Use a IA para entender, não para pular o entendimento."
+                }
+            ],
+            "pratica": "Abra o Cursor/VS Code na pasta phpian-aula. Peça à IA: “Crie um ola.php em PHP 8.3 que mostre Hello e a data atual, com comentários curtos.” Depois leia linha a linha e apague o que não entender até entender.",
+            "navegacao": {
+                "anterior": "1-2",
+                "proxima": "1-4"
+            },
+            "arquivos": [],
+            "pratica_arquivo": "praticas/1-3-ide-e-ia.php"
+        },
+        {
+            "id": "1-4",
+            "modulo": 1,
+            "numero": 4,
+            "titulo": "Hello World e sintaxe",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#1-4",
+            "duracao_min": 15,
+            "resumo": "Todo arquivo PHP usa tags especiais. O motor só interpreta o que está entre <?php e ?>.",
+            "secoes": [
+                {
+                    "titulo": "Regras essenciais",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Instruções terminam com ;.",
+                        "Comentários: // linha, /* */ bloco.",
+                        "Em arquivos só PHP, omita o ?> final.",
+                        "echo envia texto à saída."
+                    ]
+                },
+                {
+                    "titulo": "HTML + PHP",
+                    "nivel": 2,
+                    "paragrafos": [
+                        "Salve como ola.php e abra: http://localhost/phpian-aula/ola.php."
+                    ],
+                    "itens": []
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\necho \"Olá, PHPIAN!\";"
+                },
+                {
+                    "aula_secao": "HTML + PHP",
+                    "conteudo": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head><meta charset=\"UTF-8\"><title>PHPIAN</title></head>\n<body>\n  <h1><?php echo \"Bem-vindo\"; ?></h1>\n</body>\n</html>"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Mostre seu nome e a data de hoje com date('d/m/Y'). Confirme no localhost.",
+            "navegacao": {
+                "anterior": "1-3",
+                "proxima": "1-5"
+            },
+            "arquivos": [
+                "Modulo_1/Hello_world.php"
+            ],
+            "pratica_arquivo": "praticas/1-4-nome-e-data.php"
+        },
+        {
+            "id": "1-5",
+            "modulo": 1,
+            "numero": 5,
+            "titulo": "Variáveis, tipos e constantes",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#1-5",
+            "duracao_min": 20,
+            "resumo": "Variáveis em PHP começam com $. A tipagem é dinâmica, mas no PHP 8+ você tipa funções e propriedades — e deve fazer isso.",
+            "secoes": [
+                {
+                    "titulo": "Tipos escalares",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "string, int, float, bool",
+                        "null — ausência de valor",
+                        "array e object — nos próximos módulos"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$nome = \"Ana\";\n$idade = 28;\n$ativo = true;\n$saldo = 199.90;\n\ndefine('APP_NOME', 'PHPIAN');\nconst VERSAO = '1.0';\n\nvar_dump($nome, $idade);"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Alto nível",
+                    "texto": "Prefira === (igualdade estrita) a ==. Evita bugs de coerção (\"0\" == false é true!)."
+                }
+            ],
+            "pratica": "Declare variáveis de um produto (nome, preço, estoque) e imprima: \"{$nome} custa R$ {$preco}\".",
+            "navegacao": {
+                "anterior": "1-4",
+                "proxima": "2-1"
+            },
+            "arquivos": [
+                "Modulo_1/variaveis.php"
+            ],
+            "pratica_arquivo": "praticas/1-5-produto-em-variaveis.php"
+        },
+        {
+            "id": "2-1",
+            "modulo": 2,
+            "numero": 1,
+            "titulo": "Operadores",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#2-1",
+            "duracao_min": 15,
+            "resumo": "Operadores combinam e comparam valores. Domine aritmética, comparação, lógica e o operador nullsafe/null coalescing do PHP moderno.",
+            "secoes": [
+                {
+                    "titulo": "Tabela mental",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Aritméticos: + - * / % **",
+                        "Comparação: == != === !== < > <= >= <=>",
+                        "Lógicos: && || ! (e também and or, com precedência diferente)",
+                        "Null: ?? e ?->"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$a = 10;\n$b = 3;\n\necho $a + $b;   // 13\necho $a % $b;   // 1\necho $a ** $b;  // 1000\n\n$ok = ($a > 5) && ($b < 5);\n$nome = $_GET['nome'] ?? 'Visitante';"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Calcule se um aluno foi aprovado (nota >= 7 e frequencia >= 75) e imprima o resultado.",
+            "navegacao": {
+                "anterior": "1-5",
+                "proxima": "2-2"
+            },
+            "arquivos": [
+                "Modulo_2/operadores.php"
+            ],
+            "pratica_arquivo": "praticas/2-1-aprovacao-do-aluno.php"
+        },
+        {
+            "id": "2-2",
+            "modulo": 2,
+            "numero": 2,
+            "titulo": "Condicionais",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#2-2",
+            "duracao_min": 18,
+            "resumo": null,
+            "secoes": [
+                {
+                    "titulo": "if, switch e match",
+                    "nivel": 2,
+                    "paragrafos": [
+                        "match (PHP 8+) é estrito, retorna valor e não precisa de break. Prefira-o a switch em código novo."
+                    ],
+                    "itens": []
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$nota = 8.5;\n\nif ($nota >= 7) {\n    echo \"Aprovado\";\n} elseif ($nota >= 5) {\n    echo \"Recuperação\";\n} else {\n    echo \"Reprovado\";\n}\n\n$status = match (true) {\n    $nota >= 7 => 'Aprovado',\n    $nota >= 5 => 'Recuperação',\n    default => 'Reprovado',\n};"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Operador ternário",
+                    "texto": "$msg = $logado ? 'Olá' : 'Entre'; — use com parcimônia; aninhamentos ficam ilegíveis."
+                }
+            ],
+            "pratica": "Com match, converta o código HTTP 200, 404, 500 em mensagens amigáveis.",
+            "navegacao": {
+                "anterior": "2-1",
+                "proxima": "2-3"
+            },
+            "arquivos": [
+                "Modulo_2/condicionais.php"
+            ],
+            "pratica_arquivo": "praticas/2-2-status-http-com-match.php"
+        },
+        {
+            "id": "2-3",
+            "modulo": 2,
+            "numero": 3,
+            "titulo": "Loops",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#2-3",
+            "duracao_min": 16,
+            "resumo": null,
+            "secoes": [
+                {
+                    "titulo": "Quando usar cada um",
+                    "nivel": 2,
+                    "paragrafos": [
+                        "break sai do loop; continue pula para a próxima iteração."
+                    ],
+                    "itens": [
+                        "for — contagem conhecida",
+                        "foreach — percorrer arrays/coleções (o mais usado)",
+                        "while / do...while — condição dinâmica"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\nfor ($i = 1; $i <= 5; $i++) {\n    echo \"Linha {$i}\\n\";\n}\n\n$frutas = ['maçã', 'banana', 'uva'];\nforeach ($frutas as $indice => $fruta) {\n    echo \"{$indice}: {$fruta}\\n\";\n}\n\n$n = 0;\nwhile ($n < 3) {\n    echo $n++;\n}"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Some todos os números de 1 a 100 com um loop e exiba o total (dica: deve dar 5050).",
+            "navegacao": {
+                "anterior": "2-2",
+                "proxima": "2-4"
+            },
+            "arquivos": [
+                "Modulo_2/loops.php"
+            ],
+            "pratica_arquivo": "praticas/2-3-soma-de-1-a-100.php"
+        },
+        {
+            "id": "2-4",
+            "modulo": 2,
+            "numero": 4,
+            "titulo": "Funções",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#2-4",
+            "duracao_min": 22,
+            "resumo": "Funções encapsulam lógica reutilizável. No PHP moderno, tipagem e return types são padrão de qualidade.",
+            "secoes": [
+                {
+                    "titulo": "Conceitos-chave",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Parâmetros com valor padrão",
+                        "Type hints e return types",
+                        "Escopo: variáveis locais ≠ globais (evite global)",
+                        "Funções anônimas e arrow functions: fn($x) => $x * 2"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\nfunction formatarPreco(float $valor, string $moeda = 'R$'): string\n{\n    return $moeda . ' ' . number_format($valor, 2, ',', '.');\n}\n\necho formatarPreco(19.9); // R$ 19,90\n\nfunction dividir(float $a, float $b): float\n{\n    if ($b === 0.0) {\n        throw new InvalidArgumentException('Divisão por zero');\n    }\n    return $a / $b;\n}"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Crie ehEmailValido(string $email): bool usando filter_var($email, FILTER_VALIDATE_EMAIL).",
+            "navegacao": {
+                "anterior": "2-3",
+                "proxima": "2-5"
+            },
+            "arquivos": [
+                "Modulo_2/funcoes.php"
+            ],
+            "pratica_arquivo": "praticas/2-4-eh-email-valido.php"
+        },
+        {
+            "id": "2-5",
+            "modulo": 2,
+            "numero": 5,
+            "titulo": "Erros, debug e try/catch",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#2-5",
+            "duracao_min": 22,
+            "resumo": "Iniciante alto nível não “torce para funcionar”: ele lê o erro, reproduz e corrige. Isso separa quem trava de quem avança.",
+            "secoes": [
+                {
+                    "titulo": "Ative erros no localhost",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": []
+                },
+                {
+                    "titulo": "Ferramentas de debug do dia a dia",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "var_dump($x) — tipo + valor (o mais útil no começo)",
+                        "print_r($array) — arrays legíveis",
+                        "error_log('msg') — grava no log do PHP",
+                        "Leia a linha e o arquivo da mensagem de erro"
+                    ]
+                },
+                {
+                    "titulo": "try / catch",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": []
+                },
+                {
+                    "titulo": "Erros comuns (e o que significam)",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Parse error — ; ) } faltando; o PHP nem inicia",
+                        "Undefined variable — usou $x sem definir",
+                        "Call to undefined function — nome errado ou extensão faltando",
+                        "Failed to open stream — caminho de include/arquivo errado"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": "Ative erros no localhost",
+                    "conteudo": "<?php\nini_set('display_errors', '1');\nerror_reporting(E_ALL);"
+                },
+                {
+                    "aula_secao": "try / catch",
+                    "conteudo": "<?php\nfunction dividir(float $a, float $b): float\n{\n    if ($b === 0.0) {\n        throw new InvalidArgumentException('Divisão por zero');\n    }\n    return $a / $b;\n}\n\ntry {\n    echo dividir(10, 0);\n} catch (InvalidArgumentException $e) {\n    echo 'Erro: ' . $e->getMessage();\n}"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "aviso",
+                    "titulo": "Produção",
+                    "texto": "Em online: display_errors = Off. Logue erros em arquivo; nunca mostre stack trace pro visitante."
+                },
+                {
+                    "tipo": "nota",
+                    "titulo": "Com IA",
+                    "texto": "Cole a mensagem de erro inteira + 10 linhas do código e pergunte a causa. Depois explique com suas palavras."
+                }
+            ],
+            "pratica": "Provoque de propósito um erro (esqueça um ;), leia a mensagem, corrija. Depois envolva uma divisão por zero em try/catch.",
+            "navegacao": {
+                "anterior": "2-4",
+                "proxima": "3-1"
+            },
+            "arquivos": [
+                "Modulo_2/Erros, debug e try/catch.php",
+                "Modulo_2/catch.php"
+            ],
+            "pratica_arquivo": "praticas/2-5-erro-e-try-catch.php"
+        },
+        {
+            "id": "3-1",
+            "modulo": 3,
+            "numero": 1,
+            "titulo": "Arrays indexados e associativos",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#3-1",
+            "duracao_min": 18,
+            "resumo": "Arrays em PHP são mapas ordenados: podem misturar índices numéricos e chaves string. Arrays multidimensionais modelam listas de registros.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$cores = ['vermelho', 'verde', 'azul'];\n$usuario = [\n    'nome' => 'Carlos',\n    'email' => 'carlos@email.com',\n    'admin' => false,\n];\n\necho $cores[0];\necho $usuario['email'];"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Modele um array de 3 produtos, cada um com nome, preco e estoque. Percorra com foreach e imprima.",
+            "navegacao": {
+                "anterior": "2-5",
+                "proxima": "3-2"
+            },
+            "arquivos": [
+                "Modulo_3/arrays_indexados_associativos.php"
+            ],
+            "pratica_arquivo": "praticas/3-1-array-de-produtos.php"
+        },
+        {
+            "id": "3-2",
+            "modulo": 3,
+            "numero": 2,
+            "titulo": "Funções de array",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#3-2",
+            "duracao_min": 20,
+            "resumo": "array_map, array_filter e array_reduce aproximam o PHP de um estilo funcional limpo — use-os no lugar de loops verbosos quando fizer sentido.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$nums = [3, 1, 4, 1, 5];\nsort($nums);\n$dobro = array_map(fn($n) => $n * 2, $nums);\n$pares = array_filter($nums, fn($n) => $n % 2 === 0);\n$total = array_reduce($nums, fn($acc, $n) => $acc + $n, 0);\n\nin_array(4, $nums, true);\narray_key_exists('nome', $usuario);"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Dado um array de preços, use array_filter para ficar só com valores acima de 50 e array_sum para totalizar.",
+            "navegacao": {
+                "anterior": "3-1",
+                "proxima": "3-3"
+            },
+            "arquivos": [
+                "Modulo_3/funcoes_de_array.php"
+            ],
+            "pratica_arquivo": "praticas/3-2-filtrar-e-somar-precos.php"
+        },
+        {
+            "id": "3-3",
+            "modulo": 3,
+            "numero": 3,
+            "titulo": "Manipulação de strings",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#3-3",
+            "duracao_min": 16,
+            "resumo": null,
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$texto = \"  PHP Iniciante  \";\necho trim($texto);\necho strtoupper($texto);\necho strlen(\"ação\"); // cuidado com multibyte!\necho mb_strlen(\"ação\"); // 4 — use mb_* para UTF-8\n\n$slug = str_replace(' ', '-', strtolower(trim($texto)));"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "aviso",
+                    "titulo": "UTF-8",
+                    "texto": "Em português, prefira funções mb_* (mb_strlen, mb_substr) para não quebrar acentos."
+                }
+            ],
+            "pratica": "Crie uma função que recebe um nome completo e retorna as iniciais em maiúsculo (ex.: \"Ana Silva\" → \"AS\").",
+            "navegacao": {
+                "anterior": "3-2",
+                "proxima": "3-4"
+            },
+            "arquivos": [
+                "Modulo_3/manipulacao_de_strings.php"
+            ],
+            "pratica_arquivo": "praticas/3-3-iniciais-do-nome.php"
+        },
+        {
+            "id": "3-4",
+            "modulo": 3,
+            "numero": 4,
+            "titulo": "Números e datas",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#3-4",
+            "duracao_min": 15,
+            "resumo": "Evite rand() para tokens/senhas — use random_int() ou random_bytes().",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\necho abs(-5);\necho round(3.14159, 2);\necho random_int(1, 100); // criptograficamente seguro\n\necho date('Y-m-d H:i:s');\n$dt = new DateTime('now', new DateTimeZone('America/Sao_Paulo'));\necho $dt->format('d/m/Y');\n$dt->modify('+7 days');"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Mostre quantos dias faltam para o próximo ano-novo usando DateTime e diff().",
+            "navegacao": {
+                "anterior": "3-3",
+                "proxima": "3-5"
+            },
+            "arquivos": [
+                "Modulo_3/numeros e datas.php"
+            ],
+            "pratica_arquivo": "praticas/3-4-dias-ate-o-ano-novo.php"
+        },
+        {
+            "id": "3-5",
+            "modulo": 3,
+            "numero": 5,
+            "titulo": "JSON: dados para o front e APIs",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#3-5",
+            "duracao_min": 16,
+            "resumo": "JSON é o formato padrão para trocar dados com JavaScript, apps e APIs. No PHP moderno você lê e gera JSON o tempo todo.",
+            "secoes": [
+                {
+                    "titulo": "Quando usar",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Endpoint que o front consome com fetch",
+                        "Salvar estrutura em arquivo .json (protótipos)",
+                        "Integrar com serviços externos"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$produto = ['nome' => 'Curso PHPIAN', 'preco' => 97.0, 'ativo' => true];\n\nheader('Content-Type: application/json; charset=utf-8');\necho json_encode($produto, JSON_UNESCAPED_UNICODE);\n\n// ler JSON recebido (ex.: fetch/AJAX)\n$raw = file_get_contents('php://input');\n$dados = json_decode($raw, true); // true = array associativo\nif (json_last_error() !== JSON_ERROR_NONE) {\n    http_response_code(400);\n    echo json_encode(['erro' => 'JSON inválido']);\n    exit;\n}"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Crie api/hora.php que devolve JSON com hora e timezone de São Paulo. Abra no navegador e confira.",
+            "navegacao": {
+                "anterior": "3-4",
+                "proxima": "4-1"
+            },
+            "arquivos": [
+                "Modulo_3/json_dados_para_front_apis.php"
+            ],
+            "pratica_arquivo": "praticas/3-5-api-hora-json.php"
+        },
+        {
+            "id": "4-1",
+            "modulo": 4,
+            "numero": 1,
+            "titulo": "Request e response",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#4-1",
+            "duracao_min": 14,
+            "resumo": "HTTP é o contrato: o cliente envia um request (método, URL, headers, body) e o servidor devolve um response (status, headers, body).",
+            "secoes": [
+                {
+                    "titulo": null,
+                    "nivel": null,
+                    "paragrafos": [],
+                    "itens": [
+                        "GET — leitura; dados na URL (query string)",
+                        "POST — envio de dados no corpo (formulários, APIs)",
+                        "Status: 200 OK, 302 redirect, 404 not found, 422 validação"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\necho $_SERVER['REQUEST_METHOD'];\necho $_SERVER['HTTP_USER_AGENT'] ?? '';"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Crie uma página que imprime método, URI e IP do cliente ($_SERVER['REMOTE_ADDR']).",
+            "navegacao": {
+                "anterior": "3-5",
+                "proxima": "4-2"
+            },
+            "arquivos": [
+                "Modulo_4/request_response.php"
+            ],
+            "pratica_arquivo": "praticas/4-1-metodo-uri-e-ip.php"
+        },
+        {
+            "id": "4-2",
+            "modulo": 4,
+            "numero": 2,
+            "titulo": "GET, POST e formulários",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#4-2",
+            "duracao_min": 20,
+            "resumo": null,
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<!-- formulario.html -->\n<form method=\"post\" action=\"salvar.php\">\n  <label>Nome <input name=\"nome\" required></label>\n  <button type=\"submit\">Enviar</button>\n</form>"
+                },
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n// salvar.php\n$nome = $_POST['nome'] ?? '';\nif ($nome === '') {\n    http_response_code(422);\n    echo 'Nome obrigatório';\n    exit;\n}\necho 'Olá, ' . htmlspecialchars($nome, ENT_QUOTES, 'UTF-8');"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Regra de ouro",
+                    "texto": "Nunca imprima dados do usuário sem htmlspecialchars — isso previne XSS."
+                }
+            ],
+            "pratica": "Monte um formulário de contato (nome, e-mail, mensagem) e uma página que exibe os dados sanitizados.",
+            "navegacao": {
+                "anterior": "4-1",
+                "proxima": "4-3"
+            },
+            "arquivos": [
+                "Modulo_4/get_post_formularios.php"
+            ],
+            "pratica_arquivo": "praticas/4-2-formulario-de-contato.php"
+        },
+        {
+            "id": "4-3",
+            "modulo": 4,
+            "numero": 3,
+            "titulo": "Validação e sanitização",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#4-3",
+            "duracao_min": 22,
+            "resumo": "Sanitizar limpa/normaliza. Validar decide se aceita. Faça os dois.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);\n$idade = filter_input(INPUT_POST, 'idade', FILTER_VALIDATE_INT);\n\n$erros = [];\nif (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {\n    $erros[] = 'E-mail inválido';\n}\nif ($idade === false || $idade < 18) {\n    $erros[] = 'Idade mínima: 18';\n}\n\nif ($erros) {\n    // reexibir formulário com mensagens\n}"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Valide um cadastro com nome (mín. 3 chars), e-mail válido e senha (mín. 8 chars). Liste os erros.",
+            "navegacao": {
+                "anterior": "4-2",
+                "proxima": "4-4"
+            },
+            "arquivos": [
+                "Modulo_4/validacao_sanitizacao.php"
+            ],
+            "pratica_arquivo": "praticas/4-3-validar-cadastro.php"
+        },
+        {
+            "id": "4-4",
+            "modulo": 4,
+            "numero": 4,
+            "titulo": "Upload de arquivos",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#4-4",
+            "duracao_min": 18,
+            "resumo": null,
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<form method=\"post\" enctype=\"multipart/form-data\">\n  <input type=\"file\" name=\"avatar\" accept=\"image/*\">\n  <button>Enviar</button>\n</form>"
+                },
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$arquivo = $_FILES['avatar'] ?? null;\nif ($arquivo && $arquivo['error'] === UPLOAD_ERR_OK) {\n    $finfo = new finfo(FILEINFO_MIME_TYPE);\n    $mime = $finfo->file($arquivo['tmp_name']);\n    $permitidos = ['image/jpeg' => 'jpg', 'image/png' => 'png'];\n    if (!isset($permitidos[$mime])) {\n        exit('Tipo inválido');\n    }\n    $nome = bin2hex(random_bytes(8)) . '.' . $permitidos[$mime];\n    move_uploaded_file($arquivo['tmp_name'], __DIR__ . '/uploads/' . $nome);\n}"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "aviso",
+                    "titulo": "Nunca confie na extensão",
+                    "texto": "Valide MIME real, limite tamanho e salve fora da raiz pública quando possível."
+                }
+            ],
+            "pratica": "Implemente upload só de PNG/JPEG até 2MB, salvando em pasta uploads/.",
+            "navegacao": {
+                "anterior": "4-3",
+                "proxima": "4-5"
+            },
+            "arquivos": [
+                "Modulo_4/upload_de_arquivos.php"
+            ],
+            "pratica_arquivo": "praticas/4-4-upload-png-jpeg.php"
+        },
+        {
+            "id": "4-5",
+            "modulo": 4,
+            "numero": 5,
+            "titulo": "Projeto relâmpago: contato + redirect",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#4-5",
+            "duracao_min": 30,
+            "resumo": "Antes do CRM final, um vitória rápida: formulário de contato que valida, salva em arquivo e redireciona com mensagem.",
+            "secoes": [
+                {
+                    "titulo": "Padrão Post/Redirect/Get (PRG)",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Usuário envia POST",
+                        "PHP processa e grava",
+                        "PHP responde 302 para outra URL (GET)",
+                        "F5 não reenvia o formulário"
+                    ]
+                },
+                {
+                    "titulo": "O que você pratica aqui",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Formulário POST + validação",
+                        "header('Location: ...') + exit",
+                        "Mensagem flash na sessão",
+                        "Persistência simples em arquivo (antes do MySQL)"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": "Padrão Post/Redirect/Get (PRG)",
+                    "conteudo": "<?php\nsession_start();\n\nif ($_SERVER['REQUEST_METHOD'] === 'POST') {\n    $nome = trim($_POST['nome'] ?? '');\n    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);\n    $msg = trim($_POST['mensagem'] ?? '');\n\n    $erros = [];\n    if ($nome === '' || mb_strlen($nome) < 3) $erros[] = 'Nome inválido';\n    if (!$email) $erros[] = 'E-mail inválido';\n    if ($msg === '') $erros[] = 'Mensagem obrigatória';\n\n    if ($erros) {\n        $_SESSION['flash_erro'] = implode(' · ', $erros);\n        header('Location: contato.php');\n        exit;\n    }\n\n    $linha = date('c') . \" | {$nome} | {$email} | {$msg}\\n\";\n    file_put_contents(__DIR__ . '/mensagens.txt', $linha, FILE_APPEND | LOCK_EX);\n\n    $_SESSION['flash_ok'] = 'Mensagem enviada!';\n    header('Location: contato.php');\n    exit;\n}\n\n$ok = $_SESSION['flash_ok'] ?? null;\n$erro = $_SESSION['flash_erro'] ?? null;\nunset($_SESSION['flash_ok'], $_SESSION['flash_erro']);\n?>"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Alto nível",
+                    "texto": "Sempre exit depois de header Location. Sem isso o PHP continua executando o resto do arquivo."
+                }
+            ],
+            "pratica": "Monte contato.php completo (form + processamento no mesmo arquivo). Envie 2 mensagens e abra mensagens.txt para conferir.",
+            "navegacao": {
+                "anterior": "4-4",
+                "proxima": "5-1"
+            },
+            "arquivos": [
+                "Modulo_4/projeto_relampago.php"
+            ],
+            "pratica_arquivo": "praticas/4-5-projeto-relampago-contato.php"
+        },
+        {
+            "id": "5-1",
+            "modulo": 5,
+            "numero": 1,
+            "titulo": "include, require e partials",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#5-1",
+            "duracao_min": 15,
+            "resumo": "Use __DIR__ para caminhos relativos estáveis.",
+            "secoes": [
+                {
+                    "titulo": null,
+                    "nivel": null,
+                    "paragrafos": [],
+                    "itens": [
+                        "include — aviso se falhar; script continua",
+                        "require — erro fatal se falhar",
+                        "*_once — evita inclusão duplicada"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n// layout\nrequire_once __DIR__ . '/includes/header.php';\nrequire_once __DIR__ . '/includes/config.php';\n// ...\nrequire_once __DIR__ . '/includes/footer.php';"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Separe header/footer em includes e monte 2 páginas que reutilizam o mesmo layout.",
+            "navegacao": {
+                "anterior": "4-5",
+                "proxima": "5-2"
+            },
+            "arquivos": [
+                "Modulo_5/include_require_partials.php"
+            ],
+            "pratica_arquivo": "praticas/5-1-header-footer-includes.php"
+        },
+        {
+            "id": "5-2",
+            "modulo": 5,
+            "numero": 2,
+            "titulo": "Estrutura de pastas e config",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#5-2",
+            "duracao_min": 16,
+            "resumo": "Mantenha credenciais fora do Git. Use um .env (ou arquivo de config não versionado) e um .env.example no repositório.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "projeto/\n  public/          ← DocumentRoot\n    index.php\n    assets/\n  src/             ← código PHP\n  templates/\n  config/\n    app.php\n  storage/\n    uploads/"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Crie a estrutura acima e um config/app.php que retorna array com nome, debug e timezone.",
+            "navegacao": {
+                "anterior": "5-1",
+                "proxima": "5-3"
+            },
+            "arquivos": [
+                "Modulo_5/estrutura_de_pastas.txt"
+            ],
+            "pratica_arquivo": "praticas/5-2-estrutura-e-config.php"
+        },
+        {
+            "id": "5-3",
+            "modulo": 5,
+            "numero": 3,
+            "titulo": "Classes e objetos (intro)",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#5-3",
+            "duracao_min": 22,
+            "resumo": "Você já usou objetos (DateTime, PDO). Agora cria os seus — o mínimo para ler qualquer tutorial moderno.",
+            "secoes": [
+                {
+                    "titulo": "Vocabulário mínimo",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Classe — molde",
+                        "Objeto — instância (new)",
+                        "Propriedade / método — dados e ações",
+                        "Visibilidade — public, private, protected"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\nclass Contato\n{\n    public function __construct(\n        public string $nome,\n        public string $email,\n        public ?string $telefone = null,\n    ) {}\n\n    public function iniciais(): string\n    {\n        $partes = preg_split('/\\s+/', trim($this->nome)) ?: [];\n        $ini = '';\n        foreach ($partes as $p) {\n            $ini .= mb_strtoupper(mb_substr($p, 0, 1));\n        }\n        return $ini;\n    }\n}\n\n$c = new Contato('Ana Silva', 'ana@email.com');\necho $c->iniciais(); // AS"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Sem drama",
+                    "texto": "Não precisa dominar herança/interfaces agora. Só reconheça a sintaxe — o CRM final ainda pode ser procedural + PDO. OOP a fundo vem no próximo nível (Laravel)."
+                }
+            ],
+            "pratica": "Crie uma classe Produto com nome, preco e método formatarPreco(): string.",
+            "navegacao": {
+                "anterior": "5-2",
+                "proxima": "5-4"
+            },
+            "arquivos": [
+                "Modulo_5/classe_objetos(intro).php"
+            ],
+            "pratica_arquivo": "praticas/5-3-classe-produto.php"
+        },
+        {
+            "id": "5-4",
+            "modulo": 5,
+            "numero": 4,
+            "titulo": "Git e GitHub sem drama",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#5-4",
+            "duracao_min": 22,
+            "resumo": "Git salva o histórico do projeto. GitHub guarda uma cópia na nuvem — portfólio, backup e colaboração.",
+            "secoes": [
+                {
+                    "titulo": "Uma vez na máquina",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": []
+                },
+                {
+                    "titulo": "Fluxo do dia a dia",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": []
+                },
+                {
+                    "titulo": ".gitignore essencial (PHP)",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": []
+                },
+                {
+                    "titulo": "Comandos que você mais usa",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "git status — o que mudou",
+                        "git add . + git commit -m \"...\"",
+                        "git push / git pull",
+                        "git log --oneline — histórico curto"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": "Uma vez na máquina",
+                    "conteudo": "git config --global user.name \"Seu Nome\"\ngit config --global user.email \"seu@email.com\""
+                },
+                {
+                    "aula_secao": "Fluxo do dia a dia",
+                    "conteudo": "cd seu-projeto\ngit init\ngit add .\ngit commit -m \"Primeira versão do contato\"\n\n# no GitHub: crie repositório vazio, depois:\ngit remote add origin https://github.com/SEU_USER/phpian-contato.git\ngit branch -M main\ngit push -u origin main"
+                },
+                {
+                    "aula_secao": ".gitignore essencial (PHP)",
+                    "conteudo": "/vendor/\n.env\n/storage/uploads/*\n!/storage/uploads/.gitkeep\nmensagens.txt\ninfo.php"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "aviso",
+                    "titulo": "Nunca suba",
+                    "texto": "Senhas, .env, uploads de usuários ou info.php."
+                }
+            ],
+            "pratica": "Coloque o projeto relâmpago de contato no Git, crie o repo no GitHub e faça o primeiro push. Cole o link do repositório no README.",
+            "navegacao": {
+                "anterior": "5-3",
+                "proxima": "5-5"
+            },
+            "arquivos": [
+                "Modulo_5/git_github_sem_drama.txt"
+            ],
+            "pratica_arquivo": "praticas/5-4-git-e-github.php"
+        },
+        {
+            "id": "5-5",
+            "modulo": 5,
+            "numero": 5,
+            "titulo": "Composer em 20 minutos",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#5-5",
+            "duracao_min": 20,
+            "resumo": "Composer é o gerenciador de dependências do PHP (como npm no JS). Quase todo projeto moderno usa.",
+            "secoes": [
+                {
+                    "titulo": "Instalar",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Baixe em getcomposer.org (ou use o que já vem no Laragon).",
+                        "No terminal: composer -V"
+                    ]
+                },
+                {
+                    "titulo": "Começar um projeto",
+                    "nivel": 2,
+                    "paragrafos": [
+                        "Isso cria composer.json, pasta vendor/ e o autoload:"
+                    ],
+                    "itens": []
+                },
+                {
+                    "titulo": "O que memorizar",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "composer.json — lista de pacotes",
+                        "vendor/ — código baixado (não versionar)",
+                        "composer install — reinstala a partir do lock (em outra máquina)",
+                        "Autoload PSR-4 — carrega classes sem require manual"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": "Começar um projeto",
+                    "conteudo": "composer init\ncomposer require vlucas/phpdotenv\ncomposer dump-autoload"
+                },
+                {
+                    "aula_secao": "Começar um projeto",
+                    "conteudo": "<?php\nrequire __DIR__ . '/vendor/autoload.php';\n\n// exemplo: carregar .env (se instalou phpdotenv)\n// $dotenv = Dotenv\\Dotenv::createImmutable(__DIR__);\n// $dotenv->load();"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "No PHPIAN",
+                    "texto": "O Mini CRM pode viver sem pacotes externos. Composer entra para você não estranhar o ecossistema e estar pronto para Laravel depois."
+                }
+            ],
+            "pratica": "Numa pasta de teste, rode composer init (aceite defaults) e composer require monolog/monolog. Confirme que vendor/autoload.php existe.",
+            "navegacao": {
+                "anterior": "5-4",
+                "proxima": "5-6"
+            },
+            "arquivos": [
+                "Modulo_5/composer_em_20_minutos.txt"
+            ],
+            "pratica_arquivo": "praticas/5-5-composer.php"
+        },
+        {
+            "id": "5-6",
+            "modulo": 5,
+            "numero": 6,
+            "titulo": "Boas práticas (PSR leve)",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#5-6",
+            "duracao_min": 14,
+            "resumo": null,
+            "secoes": [
+                {
+                    "titulo": null,
+                    "nivel": null,
+                    "paragrafos": [],
+                    "itens": [
+                        "Indentação e chaves no estilo PSR-12",
+                        "Um conceito por arquivo/classe (quando usar OOP)",
+                        "Nomes claros; evite abreviações obscuras",
+                        "Trate erros de propósito; não silencie com @",
+                        "Separe HTML de lógica pesada (mesmo sem framework)",
+                        "Commits pequenos e mensagens em português ou inglês — consistente"
+                    ]
+                }
+            ],
+            "codigo": [],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Próximo nível",
+                    "texto": "Composer + PSR-4 + Laravel. Use a IA da IDE para revisar PSR-12 no seu código."
+                }
+            ],
+            "pratica": "Revise o projeto de contato: extraia 2 funções + includes. contato.php principal com menos de 40 linhas de lógica.",
+            "navegacao": {
+                "anterior": "5-5",
+                "proxima": "6-1"
+            },
+            "arquivos": [],
+            "pratica_arquivo": "praticas/5-6-refatorar-contato.php"
+        },
+        {
+            "id": "6-1",
+            "modulo": 6,
+            "numero": 1,
+            "titulo": "Bancos relacionais em 15 minutos",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#6-1",
+            "duracao_min": 15,
+            "resumo": "Tabelas, linhas, colunas, chaves primárias e estrangeiras. SQL é a linguagem; MySQL/MariaDB é o motor.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "CREATE TABLE contatos (\n  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,\n  nome VARCHAR(120) NOT NULL,\n  email VARCHAR(180) NOT NULL UNIQUE,\n  telefone VARCHAR(30) NULL,\n  criado_em DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP\n);"
+                }
+            ],
+            "callouts": [],
+            "pratica": "No phpMyAdmin ou CLI, crie o banco phpian e a tabela contatos.",
+            "navegacao": {
+                "anterior": "5-6",
+                "proxima": "6-2"
+            },
+            "arquivos": [],
+            "pratica_arquivo": "praticas/6-1-banco-e-tabela.php"
+        },
+        {
+            "id": "6-2",
+            "modulo": 6,
+            "numero": 2,
+            "titulo": "Conexão PDO segura",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#6-2",
+            "duracao_min": 18,
+            "resumo": "Centralize a conexão em um único arquivo. Nunca deixe senha de produção no código público.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$dsn = 'mysql:host=127.0.0.1;dbname=phpian;charset=utf8mb4';\n$user = 'root';\n$pass = '';\n\n$pdo = new PDO($dsn, $user, $pass, [\n    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,\n    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,\n    PDO::ATTR_EMULATE_PREPARES => false,\n]);"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Crie db.php que retorna uma instância PDO configurada como acima.",
+            "navegacao": {
+                "anterior": "6-1",
+                "proxima": "6-3"
+            },
+            "arquivos": [
+                "Modulo_6/conexão_PDO_segura.php"
+            ],
+            "pratica_arquivo": "praticas/6-2-db-php-pdo.php"
+        },
+        {
+            "id": "6-3",
+            "modulo": 6,
+            "numero": 3,
+            "titulo": "SELECT e prepared statements",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#6-3",
+            "duracao_min": 20,
+            "resumo": null,
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$id = (int) ($_GET['id'] ?? 0);\n$stmt = $pdo->prepare('SELECT * FROM contatos WHERE id = ?');\n$stmt->execute([$id]);\n$contato = $stmt->fetch();\n\n$stmt = $pdo->query('SELECT id, nome, email FROM contatos ORDER BY nome');\n$lista = $stmt->fetchAll();"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "aviso",
+                    "titulo": "SQL Injection",
+                    "texto": "Nunca concatene input do usuário em SQL. Sempre prepared statements com placeholders."
+                }
+            ],
+            "pratica": "Liste todos os contatos em uma tabela HTML. Crie também busca por nome com LIKE ?.",
+            "navegacao": {
+                "anterior": "6-2",
+                "proxima": "6-4"
+            },
+            "arquivos": [
+                "Modulo_6/SELECT_prepared_statements.php"
+            ],
+            "pratica_arquivo": "praticas/6-3-listar-e-buscar.php"
+        },
+        {
+            "id": "6-4",
+            "modulo": 6,
+            "numero": 4,
+            "titulo": "INSERT, UPDATE e DELETE",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#6-4",
+            "duracao_min": 20,
+            "resumo": "Após POST bem-sucedido, redirecione (PRG: Post/Redirect/Get) para evitar reenvio do formulário.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$stmt = $pdo->prepare(\n    'INSERT INTO contatos (nome, email, telefone) VALUES (?, ?, ?)'\n);\n$stmt->execute([$nome, $email, $telefone]);\n\n$stmt = $pdo->prepare('UPDATE contatos SET telefone = ? WHERE id = ?');\n$stmt->execute([$telefone, $id]);\n\n$stmt = $pdo->prepare('DELETE FROM contatos WHERE id = ?');\n$stmt->execute([$id]);"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Implemente formulário de criação e página de edição de contato.",
+            "navegacao": {
+                "anterior": "6-3",
+                "proxima": "6-5"
+            },
+            "arquivos": [
+                "Modulo_6/INSERT_UPDATE_DELETE.php"
+            ],
+            "pratica_arquivo": "praticas/6-4-criar-e-editar.php"
+        },
+        {
+            "id": "6-5",
+            "modulo": 6,
+            "numero": 5,
+            "titulo": "Joins e relações simples",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#6-5",
+            "duracao_min": 18,
+            "resumo": null,
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "CREATE TABLE tags (\n  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,\n  nome VARCHAR(60) NOT NULL UNIQUE\n);\n\nCREATE TABLE contato_tag (\n  contato_id INT UNSIGNED NOT NULL,\n  tag_id INT UNSIGNED NOT NULL,\n  PRIMARY KEY (contato_id, tag_id)\n);"
+                },
+                {
+                    "aula_secao": null,
+                    "conteudo": "SELECT c.nome, t.nome AS tag\nFROM contatos c\nJOIN contato_tag ct ON ct.contato_id = c.id\nJOIN tags t ON t.id = ct.tag_id\nWHERE c.id = ?;"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Crie 2 tags, associe a um contato e liste as tags desse contato com JOIN.",
+            "navegacao": {
+                "anterior": "6-4",
+                "proxima": "7-1"
+            },
+            "arquivos": [],
+            "pratica_arquivo": "praticas/6-5-tags-com-join.php"
+        },
+        {
+            "id": "7-1",
+            "modulo": 7,
+            "numero": 1,
+            "titulo": "Sessions e cookies",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#7-1",
+            "duracao_min": 16,
+            "resumo": "Cookies guardam dados no browser; sessões guardam no servidor e enviam só um ID. Prefira sessão para autenticação.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\nsession_start();\n$_SESSION['user_id'] = 42;\n$_SESSION['nome'] = 'Ana';\n\n// ler\necho $_SESSION['nome'] ?? 'guest';\n\n// encerrar\n$_SESSION = [];\nsession_destroy();"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Crie um contador de visitas na sessão e uma página que mostra quantas vezes o usuário acessou.",
+            "navegacao": {
+                "anterior": "6-5",
+                "proxima": "7-2"
+            },
+            "arquivos": [
+                "Modulo_7/sessions_cookies.php"
+            ],
+            "pratica_arquivo": "praticas/7-1-contador-de-visitas.php"
+        },
+        {
+            "id": "7-2",
+            "modulo": 7,
+            "numero": 2,
+            "titulo": "Hash de senhas",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#7-2",
+            "duracao_min": 15,
+            "resumo": null,
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\n$hash = password_hash($senhaPura, PASSWORD_DEFAULT);\n\nif (password_verify($senhaDigitada, $hash)) {\n    // login ok\n}\n\nif (password_needs_rehash($hash, PASSWORD_DEFAULT)) {\n    // atualizar hash no banco\n}"
+                }
+            ],
+            "callouts": [
+                {
+                    "tipo": "aviso",
+                    "titulo": "Nunca",
+                    "texto": "Guarde senha em texto puro ou com MD5/SHA1 “na mão”. Use sempre password_hash."
+                }
+            ],
+            "pratica": "Crie um script que gera hash de uma senha e outro que verifica se a digitação confere.",
+            "navegacao": {
+                "anterior": "7-1",
+                "proxima": "7-3"
+            },
+            "arquivos": [
+                "Modulo_7/hash_de_senhas.php"
+            ],
+            "pratica_arquivo": "praticas/7-2-hash-e-verificacao.php"
+        },
+        {
+            "id": "7-3",
+            "modulo": 7,
+            "numero": 3,
+            "titulo": "Autenticação simples",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#7-3",
+            "duracao_min": 22,
+            "resumo": "Proteja páginas com um gate: se não há $_SESSION['user_id'], redirecione ao login.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\nsession_start();\n$stmt = $pdo->prepare('SELECT id, nome, senha_hash FROM users WHERE email = ?');\n$stmt->execute([$email]);\n$user = $stmt->fetch();\n\nif ($user && password_verify($senha, $user['senha_hash'])) {\n    session_regenerate_id(true);\n    $_SESSION['user_id'] = $user['id'];\n    $_SESSION['user_nome'] = $user['nome'];\n    header('Location: /dashboard.php');\n    exit;\n}"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Implemente login + logout + página dashboard.php só para autenticados.",
+            "navegacao": {
+                "anterior": "7-2",
+                "proxima": "7-4"
+            },
+            "arquivos": [
+                "Modulo_7/autentificação_simples.php"
+            ],
+            "pratica_arquivo": "praticas/7-3-login-logout-dashboard.php"
+        },
+        {
+            "id": "7-4",
+            "modulo": 7,
+            "numero": 4,
+            "titulo": "Segurança web essencial",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#7-4",
+            "duracao_min": 20,
+            "resumo": null,
+            "secoes": [
+                {
+                    "titulo": null,
+                    "nivel": null,
+                    "paragrafos": [],
+                    "itens": [
+                        "XSS — escape com htmlspecialchars",
+                        "SQL Injection — prepared statements",
+                        "CSRF — token na sessão + campo hidden no form",
+                        "Force browsing — autorize no servidor, não só esconda links",
+                        "HTTPS em produção; cookies com flags Secure, HttpOnly, SameSite"
+                    ]
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\nif (empty($_SESSION['csrf'])) {\n    $_SESSION['csrf'] = bin2hex(random_bytes(32));\n}\n// no form: <input type=\"hidden\" name=\"csrf\" value=\"...\">\nif (!hash_equals($_SESSION['csrf'], $_POST['csrf'] ?? '')) {\n    http_response_code(403);\n    exit('CSRF inválido');\n}"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Adicione token CSRF ao formulário de criação de contatos.",
+            "navegacao": {
+                "anterior": "7-3",
+                "proxima": "8-1"
+            },
+            "arquivos": [
+                "Modulo_7/segurança_web_essencial.php"
+            ],
+            "pratica_arquivo": "praticas/7-4-csrf-no-formulario.php"
+        },
+        {
+            "id": "8-1",
+            "modulo": 8,
+            "numero": 1,
+            "titulo": "Briefing do Mini CRM",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#8-1",
+            "duracao_min": 12,
+            "resumo": "Você vai construir um sistema com:",
+            "secoes": [
+                {
+                    "titulo": null,
+                    "nivel": null,
+                    "paragrafos": [],
+                    "itens": [
+                        "Cadastro/login de usuário admin",
+                        "CRUD de contatos (nome, e-mail, telefone, notas)",
+                        "Listagem com busca",
+                        "Área autenticada",
+                        "Layout simples e limpo"
+                    ]
+                },
+                {
+                    "titulo": "Critérios de pronto",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Visitante não autenticado não acessa o CRM",
+                        "Contatos persistem no MySQL via PDO",
+                        "Inputs validados e escapados na saída",
+                        "Senha com password_hash",
+                        "Roda em localhost (e opcionalmente na HostGator)"
+                    ]
+                },
+                {
+                    "titulo": "Arquivos típicos (guia mental)",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": []
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": "Arquivos típicos (guia mental)",
+                    "conteudo": "public/index.php\npublic/login.php\npublic/logout.php\npublic/contatos/index.php\npublic/contatos/criar.php\npublic/contatos/editar.php\nsrc/auth.php\nsrc/db.php\nconfig/app.php\ntemplates/header.php\ntemplates/footer.php"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Esboce no papel as telas: Login, Lista, Novo, Editar. Anote os campos de cada formulário.",
+            "navegacao": {
+                "anterior": "7-4",
+                "proxima": "8-2"
+            },
+            "arquivos": [
+                "Modulo_8(modeagem_final)/mini-crm/TELAS.md"
+            ],
+            "pratica_arquivo": "praticas/8-1-esboco-das-telas.php"
+        },
+        {
+            "id": "8-2",
+            "modulo": 8,
+            "numero": 2,
+            "titulo": "Modelagem e setup",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#8-2",
+            "duracao_min": 20,
+            "resumo": "Monte pastas public/, src/, templates/, config/. Crie o usuário admin inicial via script seed.",
+            "secoes": [],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "CREATE TABLE users (\n  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,\n  nome VARCHAR(120) NOT NULL,\n  email VARCHAR(180) NOT NULL UNIQUE,\n  senha_hash VARCHAR(255) NOT NULL\n);\n\nCREATE TABLE contatos (\n  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,\n  user_id INT UNSIGNED NOT NULL,\n  nome VARCHAR(120) NOT NULL,\n  email VARCHAR(180) NULL,\n  telefone VARCHAR(30) NULL,\n  notas TEXT NULL,\n  criado_em DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  FOREIGN KEY (user_id) REFERENCES users(id)\n);"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Rode o SQL, configure db.php e insira um user admin com hash de senha.",
+            "navegacao": {
+                "anterior": "8-1",
+                "proxima": "8-3"
+            },
+            "arquivos": [
+                "Modulo_8(modeagem_final)/mini-crm/sql/schema.sql",
+                "Modulo_8(modeagem_final)/mini-crm/scripts/seed.php",
+                "Modulo_8(modeagem_final)/mini-crm/src/db.php"
+            ],
+            "pratica_arquivo": "praticas/8-2-schema-e-seed.php"
+        },
+        {
+            "id": "8-3",
+            "modulo": 8,
+            "numero": 3,
+            "titulo": "CRUD completo",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#8-3",
+            "duracao_min": 35,
+            "resumo": "Implemente na ordem:",
+            "secoes": [
+                {
+                    "titulo": null,
+                    "nivel": null,
+                    "paragrafos": [],
+                    "itens": [
+                        "Listar contatos do usuário logado",
+                        "Criar contato (POST + redirect)",
+                        "Editar contato (ownership: user_id)",
+                        "Excluir com confirmação",
+                        "Busca por nome/e-mail"
+                    ]
+                }
+            ],
+            "codigo": [],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Ownership",
+                    "texto": "Toda query deve filtrar por user_id = sessão. Um usuário não edita contato de outro."
+                }
+            ],
+            "pratica": "Finalize o CRUD e teste com 2 usuários diferentes (se quiser criar o segundo manualmente no banco).",
+            "navegacao": {
+                "anterior": "8-2",
+                "proxima": "8-4"
+            },
+            "arquivos": [
+                "Modulo_8(modeagem_final)/mini-crm/public/contatos/index.php",
+                "Modulo_8(modeagem_final)/mini-crm/public/contatos/criar.php",
+                "Modulo_8(modeagem_final)/mini-crm/public/contatos/editar.php",
+                "Modulo_8(modeagem_final)/mini-crm/public/contatos/excluir.php",
+                "Modulo_8(modeagem_final)/mini-crm/src/contatos.php"
+            ],
+            "pratica_arquivo": "praticas/8-3-crud-com-ownership.php"
+        },
+        {
+            "id": "8-4",
+            "modulo": 8,
+            "numero": 4,
+            "titulo": "Login e área protegida",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#8-4",
+            "duracao_min": 25,
+            "resumo": "Una autenticação ao CRM: auth/login.php, auth/logout.php, helper requireAuth().",
+            "secoes": [
+                {
+                    "titulo": null,
+                    "nivel": null,
+                    "paragrafos": [
+                        "Adicione CSRF nos forms de mutação e escape todas as saídas."
+                    ],
+                    "itens": []
+                }
+            ],
+            "codigo": [
+                {
+                    "aula_secao": null,
+                    "conteudo": "<?php\nfunction requireAuth(): void\n{\n    if (empty($_SESSION['user_id'])) {\n        header('Location: /login.php');\n        exit;\n    }\n}"
+                }
+            ],
+            "callouts": [],
+            "pratica": "Faça um checklist de segurança e marque cada item no seu projeto.",
+            "navegacao": {
+                "anterior": "8-3",
+                "proxima": "8-5"
+            },
+            "arquivos": [
+                "Modulo_8(modeagem_final)/mini-crm/src/auth.php",
+                "Modulo_8(modeagem_final)/mini-crm/src/csrf.php",
+                "Modulo_8(modeagem_final)/mini-crm/public/login.php",
+                "Modulo_8(modeagem_final)/mini-crm/public/logout.php"
+            ],
+            "pratica_arquivo": "praticas/8-4-checklist-de-seguranca.php"
+        },
+        {
+            "id": "8-5",
+            "modulo": 8,
+            "numero": 5,
+            "titulo": "Rodar no localhost e publicar online",
+            "url": "https://cursos.asllanmaciel.com.br/cursos/phpian/aula.php#8-5",
+            "duracao_min": 28,
+            "resumo": "Meta desta aula: o Mini CRM funcionando na sua máquina e, se quiser, no ar com domínio.",
+            "secoes": [
+                {
+                    "titulo": "A) Checklist localhost (obrigatório)",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Laragon/XAMPP com Apache + MySQL ligados.",
+                        "Banco importado (SQL do projeto) e config apontando para localhost.",
+                        "Login admin testado; CRUD de contatos ok.",
+                        "Sem info.php ou arquivos de debug na pasta pública.",
+                        "URL local abre, por exemplo: http://localhost/mini-crm/public/"
+                    ]
+                },
+                {
+                    "titulo": "B) Publicar online (recomendado: HostGator)",
+                    "nivel": 2,
+                    "paragrafos": [
+                        "Para hospedagem compartilhada no Brasil com PHP + MySQL, recomendamos a HostGator:",
+                        "https://www.hostgator.com.br/3683.html"
+                    ],
+                    "itens": []
+                },
+                {
+                    "titulo": "Passo a passo na HostGator",
+                    "nivel": 3,
+                    "paragrafos": [],
+                    "itens": [
+                        "Contrate o plano e acesse o cPanel.",
+                        "Em Bancos de Dados MySQL, crie banco, usuário e senha; associe o usuário ao banco.",
+                        "Abra o phpMyAdmin e importe o .sql do seu CRM.",
+                        "No File Manager (ou FTP), envie os arquivos para public_html (ou subpasta).",
+                        "Se usou pasta public/, aponte o domínio/subdomínio para essa pasta (ou suba o conteúdo de public/ para a raiz pública).",
+                        "Edite a config de produção: host MySQL da HostGator, usuário, senha, nome do banco.",
+                        "Em PHP, use versão 8.2+ no seletor do cPanel.",
+                        "Desligue debug: display_errors = Off.",
+                        "Ative HTTPS (SSL grátis do painel) e teste login + CRUD no domínio."
+                    ]
+                },
+                {
+                    "titulo": "C) Depois do PHPIAN",
+                    "nivel": 2,
+                    "paragrafos": [],
+                    "itens": [
+                        "Composer + autoload PSR-4",
+                        "Laravel (próximo salto natural)",
+                        "APIs JSON",
+                        "Continuar usando IA na IDE — agora com base sólida"
+                    ]
+                }
+            ],
+            "codigo": [],
+            "callouts": [
+                {
+                    "tipo": "nota",
+                    "titulo": "Pronto no localhost = aprovado",
+                    "texto": "Se o CRM roda aí, você já concluiu o objetivo técnico do curso. Publicar online é o bônus de portfólio."
+                },
+                {
+                    "tipo": "aviso",
+                    "titulo": "Nunca",
+                    "texto": "Suba senha de banco no Git/GitHub público. Em produção use arquivo de config fora do versionamento ou variáveis do painel."
+                },
+                {
+                    "tipo": "nota",
+                    "titulo": "Parabéns",
+                    "texto": "Você saiu do zero, rodou PHP moderno no localhost e sabe publicar. O Mini CRM é portfólio real."
+                }
+            ],
+            "pratica": "1) Grave um README: como instalar no localhost. 2) Se publicar, cole a URL do CRM no ar (HostGator) e teste o login.",
+            "navegacao": {
+                "anterior": "8-4",
+                "proxima": null
+            },
+            "arquivos": [
+                "Modulo_8(modeagem_final)/mini-crm/README.md",
+                "Modulo_8(modeagem_final)/mini-crm/SEGURANCA.md"
+            ],
+            "pratica_arquivo": "praticas/8-5-readme-e-publicacao.php"
+        }
+    ]
+}

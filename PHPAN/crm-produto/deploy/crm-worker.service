@@ -1,0 +1,14 @@
+[Unit]
+Description=CRM de produto — worker da fila
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/crm-produto/current
+ExecStart=/usr/bin/php bin/worker.php
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

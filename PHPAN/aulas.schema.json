@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cursos.asllanmaciel.com.br/phpan/aulas.schema.json",
+  "title": "Índice de aulas do PHPAN",
+  "description": "Metadados das 47 aulas. Substitui o docblock de cabeçalho que ficava no topo de cada Modulo_N/NN-slug.php. Os comentários // que explicam uma linha específica continuam no PHP, de propósito.",
+  "type": "object",
+  "required": ["curso", "modulos", "aulas"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "curso": {
+      "type": "object",
+      "required": ["id", "nome", "base_url", "total_modulos", "total_aulas"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "plataforma": { "type": "string" },
+        "base_url": { "type": "string", "format": "uri" },
+        "total_modulos": { "type": "integer", "minimum": 1 },
+        "total_aulas": { "type": "integer", "minimum": 1 },
+        "projeto": { "type": "string", "description": "Pasta do projeto que atravessa o curso." }
+      }
+    },
+    "modulos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["numero", "titulo", "aulas"],
+        "additionalProperties": false,
+        "properties": {
+          "numero": { "type": "integer", "minimum": 1 },
+          "slug": { "type": ["string", "null"], "description": "Segmento do módulo na URL da plataforma." },
+          "titulo": { "type": "string" },
+          "aulas": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "aulas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "modulo", "numero", "slug", "titulo", "url", "arquivos", "rodar", "status", "demonstra"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "description": "lesson-id da plataforma: <modulo-slug>/<NN-slug>." },
+          "modulo": { "type": "integer", "minimum": 1 },
+          "numero": { "type": "string", "pattern": "^[0-9]{2}$" },
+          "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "titulo": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "arquivos": {
+            "type": "object",
+            "required": ["codigo", "nota"],
+            "additionalProperties": false,
+            "properties": {
+              "codigo": { "type": "string", "description": "O .php que roda, relativo à raiz do PHPAN." },
+              "nota": { "type": ["string", "null"], "description": "O .md com a ideia e o motivo das escolhas. null quando a aula não tem nota." }
+            }
+          },
+          "rodar": { "type": ["string", "null"], "description": "Comando executado a partir da raiz do PHPAN." },
+          "rodar_observacao": { "type": "string", "description": "Pré-requisito do comando, por exemplo 'precisa do banco'." },
+          "status": {
+            "type": "object",
+            "required": ["assistida", "anotada", "praticada", "observacao"],
+            "additionalProperties": false,
+            "properties": {
+              "assistida": { "type": "boolean" },
+              "anotada": { "type": "boolean" },
+              "praticada": { "type": "boolean" },
+              "observacao": { "type": ["string", "null"] }
+            }
+          },
+          "demonstra": {
+            "type": "array",
+            "description": "O que o .php prova quando roda — um item por afirmação.",
+            "items": { "type": "string" }
+          },
+          "referencias": {
+            "type": "array",
+            "description": "Ponteiros extras da aula: servidor a subir, página a abrir, documento a ler.",
+            "items": {
+              "type": "object",
+              "required": ["rotulo", "valor"],
+              "additionalProperties": false,
+              "properties": {
+                "rotulo": { "type": "string" },
+                "valor": { "type": "string" }
+              }
+            }
+          },
+          "notas": {
+            "type": "array",
+            "description": "Blocos de texto do cabeçalho antigo que não são metadado — hoje só a Aula 02 do Módulo 1, que é gabarito de exercícios e não tem .md.",
+            "items": {
+              "type": "object",
+              "required": ["titulo", "texto"],
+              "additionalProperties": false,
+              "properties": {
+                "titulo": { "type": ["string", "null"] },
+                "texto": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

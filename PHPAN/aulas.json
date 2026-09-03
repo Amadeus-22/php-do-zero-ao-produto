@@ -1,0 +1,1161 @@
+{
+    "$schema": "./aulas.schema.json",
+    "curso": {
+        "id": "phpan",
+        "nome": "PHPAN — Intermediário",
+        "plataforma": "cursos.asllanmaciel.com.br",
+        "base_url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula",
+        "total_modulos": 8,
+        "total_aulas": 47,
+        "projeto": "crm-produto/"
+    },
+    "modulos": [
+        {
+            "numero": 1,
+            "slug": "modulo-01-mapa",
+            "titulo": "Mapa do intermediário e revisão ativa",
+            "aulas": 5
+        },
+        {
+            "numero": 2,
+            "slug": "modulo-02-oop",
+            "titulo": "OOP de verdade (sem framework)",
+            "aulas": 6
+        },
+        {
+            "numero": 3,
+            "slug": "modulo-03-mvc",
+            "titulo": "MVC próprio (ainda sem Laravel)",
+            "aulas": 6
+        },
+        {
+            "numero": 4,
+            "slug": "modulo-04-api",
+            "titulo": "API REST + JSON",
+            "aulas": 6
+        },
+        {
+            "numero": 5,
+            "slug": "modulo-05-auth",
+            "titulo": "Autenticação e autorização sérias",
+            "aulas": 6
+        },
+        {
+            "numero": 6,
+            "slug": "modulo-06-produto",
+            "titulo": "Recursos de produto",
+            "aulas": 6
+        },
+        {
+            "numero": 7,
+            "slug": "modulo-07-producao",
+            "titulo": "Produção: config, ambientes e deploy",
+            "aulas": 6
+        },
+        {
+            "numero": 8,
+            "slug": "modulo-08-final",
+            "titulo": "Monetização leve e projeto final",
+            "aulas": 6
+        }
+    ],
+    "aulas": [
+        {
+            "id": "modulo-01-mapa/01-salto-do-phpian",
+            "modulo": 1,
+            "numero": "01",
+            "slug": "salto-do-phpian",
+            "titulo": "O salto do PHPIAN: o que muda no dia a dia",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-01-mapa/01-salto-do-phpian",
+            "arquivos": {
+                "codigo": "Modulo_1/01-salto-do-phpian.php",
+                "nota": "Modulo_1/01-salto-do-phpian.md"
+            },
+            "rodar": "php Modulo_1/01-salto-do-phpian.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "Por que o código \"antes\" é perigoso — a query que o atacante monta.",
+                "Que o código \"depois\" impede o mesmo problema por construção.",
+                "Que domínio, contrato e aplicação não têm uma linha de SQL."
+            ]
+        },
+        {
+            "id": "modulo-01-mapa/02-revisao-ativa",
+            "modulo": 1,
+            "numero": "02",
+            "slug": "revisao-ativa",
+            "titulo": "Revisão ativa: PDO, auth por sessão e OOP intro",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-01-mapa/02-revisao-ativa",
+            "arquivos": {
+                "codigo": "Modulo_1/02-revisao-ativa.php",
+                "nota": null
+            },
+            "rodar": "php Modulo_1/02-revisao-ativa.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": "parcial — ver EXECUÇÃO abaixo"
+            },
+            "demonstra": [],
+            "notas": [
+                {
+                    "titulo": "EXECUÇÃO",
+                    "texto": "Rodado neste ambiente (PHP 8.4.25):\n  3.1 Cliente ........................ OK\n  3.3 Contato com e-mail válido ...... OK\n  3.3 e-mail inválido rejeitado ...... OK\n  3.3 alterarEmail revalida .......... OK\n  3.3 escrita direta bloqueada ....... OK\n  2.3 logout(): arquivo de sessão removido, $_SESSION esvaziado,\n      sessão inativa ao final ........ OK"
+                },
+                {
+                    "titulo": "PENDENTE",
+                    "texto": "os blocos 1 (PDO) e 2.1 (autenticar) precisam de um banco.\nSó pdo_mysql está disponível aqui (sem pdo_sqlite), e o root do MySQL local usa\nauth_socket — precisa de sudo para criar um usuário/banco de estudo."
+                },
+                {
+                    "titulo": "OBJETIVO",
+                    "texto": "Reativar três pilares do PHPIAN — PDO, auth por sessão e OOP introdutório —\npor exercício, não por teoria repetida."
+                },
+                {
+                    "titulo": "ESTA AULA NÃO ENSINA NADA NOVO. É UM CHECKPOINT.",
+                    "texto": "Resolver os 9 exercícios sem consultar tutorial. Se resolveu com fluência,\nsegue. Se travou, o problema não é o PHPAN — é base do PHPIAN não sedimentada,\ne vale reforçar antes de empilhar complexidade."
+                },
+                {
+                    "titulo": "Regra da aula",
+                    "texto": "errou mais de 3 dos 9 → parar e revisar o PHPIAN antes da Aula 3."
+                },
+                {
+                    "titulo": "NOTA DESTE ARQUIVO",
+                    "texto": "As classes abaixo estão sem namespace só para o arquivo rodar isolado\n(`php 02-revisao-ativa.php`). No CRM de produto elas moram em App\\Domain\\..."
+                }
+            ]
+        },
+        {
+            "id": "modulo-01-mapa/03-produto-em-camadas",
+            "modulo": 1,
+            "numero": "03",
+            "slug": "produto-em-camadas",
+            "titulo": "Como um produto PHP \"de verdade\" se parece",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-01-mapa/03-produto-em-camadas",
+            "arquivos": {
+                "codigo": "Modulo_1/03-produto-em-camadas.php",
+                "nota": "Modulo_1/03-produto-em-camadas.md"
+            },
+            "rodar": "php Modulo_1/03-produto-em-camadas.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "As 4 camadas atravessadas por UMA requisição, de ponta a ponta.",
+                "Que a dependência aponta para dentro (infra implementa contrato do domínio).",
+                "O exercício de leitura de arquitetura da aula, linha a linha."
+            ]
+        },
+        {
+            "id": "modulo-01-mapa/04-briefing-crm-produto",
+            "modulo": 1,
+            "numero": "04",
+            "slug": "briefing-crm-produto",
+            "titulo": "Briefing do CRM de produto",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-01-mapa/04-briefing-crm-produto",
+            "arquivos": {
+                "codigo": "Modulo_1/04-briefing-crm-produto.php",
+                "nota": "Modulo_1/04-briefing-crm-produto.md"
+            },
+            "rodar": "php Modulo_1/04-briefing-crm-produto.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "a rubrica do briefing conferida contra o que existe hoje — o mapa do curso inteiro, com o que foi entregue e o que ficou pendente."
+            ]
+        },
+        {
+            "id": "modulo-01-mapa/05-ambiente-profissional",
+            "modulo": 1,
+            "numero": "05",
+            "slug": "ambiente-profissional",
+            "titulo": "Ambiente profissional: PHP 8.3, Composer no fluxo diário",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-01-mapa/05-ambiente-profissional",
+            "arquivos": {
+                "codigo": "Modulo_1/05-ambiente-profissional.php",
+                "nota": "Modulo_1/05-ambiente-profissional.md"
+            },
+            "rodar": "php Modulo_1/05-ambiente-profissional.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o ambiente conferido de verdade, o autoload PSR-4 funcionando, e o PHPStan sendo QUEBRADO de propósito para ver o que ele pega."
+            ]
+        },
+        {
+            "id": "modulo-02-oop/01-classes-tipadas",
+            "modulo": 2,
+            "numero": "01",
+            "slug": "classes-tipadas",
+            "titulo": "Classes, propriedades tipadas e métodos com intenção",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-02-oop/01-classes-tipadas",
+            "arquivos": {
+                "codigo": "Modulo_2/01-classes-tipadas.php",
+                "nota": "Modulo_2/01-classes-tipadas.md"
+            },
+            "rodar": "php Modulo_2/01-classes-tipadas.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "strict_types pegando erro no lugar certo, readonly, e por que renomear() é melhor que setNome()."
+            ]
+        },
+        {
+            "id": "modulo-02-oop/02-composicao-vs-heranca",
+            "modulo": 2,
+            "numero": "02",
+            "slug": "composicao-vs-heranca",
+            "titulo": "Encapsulamento, composição vs herança",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-02-oop/02-composicao-vs-heranca",
+            "arquivos": {
+                "codigo": "Modulo_2/02-composicao-vs-heranca.php",
+                "nota": "Modulo_2/02-composicao-vs-heranca.md"
+            },
+            "rodar": "php Modulo_2/02-composicao-vs-heranca.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "invariante protegida por encapsulamento, \"é um\" x \"tem um\", e o antipadrão de herança-para-reuso."
+            ]
+        },
+        {
+            "id": "modulo-02-oop/03-interfaces-contratos",
+            "modulo": 2,
+            "numero": "03",
+            "slug": "interfaces-contratos",
+            "titulo": "Interfaces e contratos",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-02-oop/03-interfaces-contratos",
+            "arquivos": {
+                "codigo": "Modulo_2/03-interfaces-contratos.php",
+                "nota": "Modulo_2/03-interfaces-contratos.md"
+            },
+            "rodar": "php Modulo_2/03-interfaces-contratos.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o MESMO caso de uso rodando com duas implementações diferentes, sem uma linha de mudança — que é a promessa da interface, cobrada."
+            ]
+        },
+        {
+            "id": "modulo-02-oop/04-namespaces-psr4",
+            "modulo": 2,
+            "numero": "04",
+            "slug": "namespaces-psr4",
+            "titulo": "Namespaces e autoload PSR-4",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-02-oop/04-namespaces-psr4",
+            "arquivos": {
+                "codigo": "Modulo_2/04-namespaces-psr4.php",
+                "nota": "Modulo_2/04-namespaces-psr4.md"
+            },
+            "rodar": "php Modulo_2/04-namespaces-psr4.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o mapeamento namespace->arquivo conferido classe a classe, e o erro de autoload reproduzido de propósito."
+            ]
+        },
+        {
+            "id": "modulo-02-oop/05-excecoes-dominio",
+            "modulo": 2,
+            "numero": "05",
+            "slug": "excecoes-dominio",
+            "titulo": "Exceções de domínio",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-02-oop/05-excecoes-dominio",
+            "arquivos": {
+                "codigo": "Modulo_2/05-excecoes-dominio.php",
+                "nota": "Modulo_2/05-excecoes-dominio.md"
+            },
+            "rodar": "php Modulo_2/05-excecoes-dominio.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "captura escalonada por tipo, a hierarquia do domínio, e o parent::__construct() que, esquecido, deixa getMessage() vazio."
+            ]
+        },
+        {
+            "id": "modulo-02-oop/06-refatorar-dominio-crm",
+            "modulo": 2,
+            "numero": "06",
+            "slug": "refatorar-dominio-crm",
+            "titulo": "Refatorar o Mini CRM: extrair Modelos e Serviços",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-02-oop/06-refatorar-dominio-crm",
+            "arquivos": {
+                "codigo": "Modulo_2/06-refatorar-dominio-crm.php",
+                "nota": "Modulo_2/06-refatorar-dominio-crm.md"
+            },
+            "rodar": "php Modulo_2/06-refatorar-dominio-crm.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o checklist de qualidade do domínio, item por item, verificado no código — e o quiz do módulo respondido."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-03-mvc/01-ciclo-http-camadas",
+            "modulo": 3,
+            "numero": "01",
+            "slug": "ciclo-http-camadas",
+            "titulo": "O ciclo HTTP revisitado, com camadas",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-03-mvc/01-ciclo-http-camadas",
+            "arquivos": {
+                "codigo": "Modulo_3/01-ciclo-http-camadas.php",
+                "nota": "Modulo_3/01-ciclo-http-camadas.md"
+            },
+            "rodar": "php Modulo_3/01-ciclo-http-camadas.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "uma requisição atravessando as camadas, com o rastro impresso."
+            ]
+        },
+        {
+            "id": "modulo-03-mvc/02-front-controller-rotas",
+            "modulo": 3,
+            "numero": "02",
+            "slug": "front-controller-rotas",
+            "titulo": "Front Controller e roteamento simples",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-03-mvc/02-front-controller-rotas",
+            "arquivos": {
+                "codigo": "Modulo_3/02-front-controller-rotas.php",
+                "nota": "Modulo_3/02-front-controller-rotas.md"
+            },
+            "rodar": "php Modulo_3/02-front-controller-rotas.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "Request/Response/Router — e as 4 armadilhas da aula, cada uma provada com um caso que falharia se a defesa não existisse."
+            ],
+            "referencias": [
+                {
+                    "rotulo": "Servidor real",
+                    "valor": "cd crm-produto && php -S localhost:8000 -t public"
+                }
+            ]
+        },
+        {
+            "id": "modulo-03-mvc/03-controllers-services",
+            "modulo": 3,
+            "numero": "03",
+            "slug": "controllers-services",
+            "titulo": "Controllers finos, Services gordos",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-03-mvc/03-controllers-services",
+            "arquivos": {
+                "codigo": "Modulo_3/03-controllers-services.php",
+                "nota": "Modulo_3/03-controllers-services.md"
+            },
+            "rodar": "php Modulo_3/03-controllers-services.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "que a regra de negócio mora num lugar só — e que o Controller não sabe o que é SQL nem decide se um e-mail pode duplicar."
+            ]
+        },
+        {
+            "id": "modulo-03-mvc/04-views-layouts",
+            "modulo": 3,
+            "numero": "04",
+            "slug": "views-layouts",
+            "titulo": "Views PHP: layouts e partials",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-03-mvc/04-views-layouts",
+            "arquivos": {
+                "codigo": "Modulo_3/04-views-layouts.php",
+                "nota": "Modulo_3/04-views-layouts.md"
+            },
+            "rodar": "php Modulo_3/04-views-layouts.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "PHP + output buffering JÁ é uma engine de template — e que o escape não é opcional."
+            ]
+        },
+        {
+            "id": "modulo-03-mvc/05-validacao-formularios",
+            "modulo": 3,
+            "numero": "05",
+            "slug": "validacao-formularios",
+            "titulo": "Validação centralizada e feedback de formulário",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-03-mvc/05-validacao-formularios",
+            "arquivos": {
+                "codigo": "Modulo_3/05-validacao-formularios.php",
+                "nota": "Modulo_3/05-validacao-formularios.md"
+            },
+            "rodar": "php Modulo_3/05-validacao-formularios.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "a separação entre validação de FORMATO (síncrona, sem I/O) e REGRA DE NEGÓCIO (precisa consultar) — e o old input."
+            ]
+        },
+        {
+            "id": "modulo-03-mvc/06-middleware-leve",
+            "modulo": 3,
+            "numero": "06",
+            "slug": "middleware-leve",
+            "titulo": "Middleware leve: auth, CSRF, \"só admin\"",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-03-mvc/06-middleware-leve",
+            "arquivos": {
+                "codigo": "Modulo_3/06-middleware-leve.php",
+                "nota": "Modulo_3/06-middleware-leve.md"
+            },
+            "rodar": "php Modulo_3/06-middleware-leve.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o contrato null/Response, a ORDEM importando, e CSRF barrando de verdade uma requisição forjada."
+            ]
+        },
+        {
+            "id": "modulo-04-api/01-recursos-verbos-status",
+            "modulo": 4,
+            "numero": "01",
+            "slug": "recursos-verbos-status",
+            "titulo": "Recursos, verbos e status HTTP na prática",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-04-api/01-recursos-verbos-status",
+            "arquivos": {
+                "codigo": "Modulo_4/01-recursos-verbos-status.php",
+                "nota": "Modulo_4/01-recursos-verbos-status.md"
+            },
+            "rodar": "php Modulo_4/01-recursos-verbos-status.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "cada verbo fazendo uma coisa, cada resposta com o status certo — e por que serializar a entidade direto estraga o contrato."
+            ]
+        },
+        {
+            "id": "modulo-04-api/02-json-contratos",
+            "modulo": 4,
+            "numero": "02",
+            "slug": "json-contratos",
+            "titulo": "JSON de entrada e saída (contratos estáveis)",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-04-api/02-json-contratos",
+            "arquivos": {
+                "codigo": "Modulo_4/02-json-contratos.php",
+                "nota": "Modulo_4/02-json-contratos.md"
+            },
+            "rodar": "php Modulo_4/02-json-contratos.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o envelope {data}/{error}, o Resource controlando o que sai, e mass assignment sendo ignorado na prática."
+            ]
+        },
+        {
+            "id": "modulo-04-api/03-versionamento-api-v1",
+            "modulo": 4,
+            "numero": "03",
+            "slug": "versionamento-api-v1",
+            "titulo": "Versionamento simples (/api/v1)",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-04-api/03-versionamento-api-v1",
+            "arquivos": {
+                "codigo": "Modulo_4/03-versionamento-api-v1.php",
+                "nota": "Modulo_4/03-versionamento-api-v1.md"
+            },
+            "rodar": "php Modulo_4/03-versionamento-api-v1.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o que versiona (a casca) e o que NÃO versiona (o núcleo)."
+            ]
+        },
+        {
+            "id": "modulo-04-api/04-paginacao-filtros-erros",
+            "modulo": 4,
+            "numero": "04",
+            "slug": "paginacao-filtros-erros",
+            "titulo": "Paginação, filtros e erros padronizados",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-04-api/04-paginacao-filtros-erros",
+            "arquivos": {
+                "codigo": "Modulo_4/04-paginacao-filtros-erros.php",
+                "nota": "Modulo_4/04-paginacao-filtros-erros.md"
+            },
+            "rodar": "php Modulo_4/04-paginacao-filtros-erros.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "meta de paginação, filtro q, e os limites que impedem page=0 e per_page=999999 de derrubarem o servidor."
+            ]
+        },
+        {
+            "id": "modulo-04-api/05-consumir-api-no-painel",
+            "modulo": 4,
+            "numero": "05",
+            "slug": "consumir-api-no-painel",
+            "titulo": "Consumir a própria API no painel",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-04-api/05-consumir-api-no-painel",
+            "arquivos": {
+                "codigo": "Modulo_4/05-consumir-api-no-painel.php",
+                "nota": "Modulo_4/05-consumir-api-no-painel.md"
+            },
+            "rodar": "php Modulo_4/05-consumir-api-no-painel.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o contrato que o JS consome e as defesas do cliente JS — verificadas lendo o próprio arquivo servido ao navegador."
+            ],
+            "referencias": [
+                {
+                    "rotulo": "Ver no navegador",
+                    "valor": "cd crm-produto && php -S localhost:8000 -t public  ->  /painel"
+                }
+            ]
+        },
+        {
+            "id": "modulo-04-api/06-documentar-endpoints",
+            "modulo": 4,
+            "numero": "06",
+            "slug": "documentar-endpoints",
+            "titulo": "Documentar endpoints (mínimo legível para humano)",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-04-api/06-documentar-endpoints",
+            "arquivos": {
+                "codigo": "Modulo_4/06-documentar-endpoints.php",
+                "nota": "Modulo_4/06-documentar-endpoints.md"
+            },
+            "rodar": "php Modulo_4/06-documentar-endpoints.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "a doc conferida CONTRA o código — é o que impede ela de mentir."
+            ],
+            "referencias": [
+                {
+                    "rotulo": "Documento",
+                    "valor": "crm-produto/docs/api.md"
+                }
+            ]
+        },
+        {
+            "id": "modulo-05-auth/01-limites-sessao-vs-token",
+            "modulo": 5,
+            "numero": "01",
+            "slug": "limites-sessao-vs-token",
+            "titulo": "Sessão vs token: limites de cada um",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-05-auth/01-limites-sessao-vs-token",
+            "arquivos": {
+                "codigo": "Modulo_5/01-limites-sessao-vs-token.php",
+                "nota": "Modulo_5/01-limites-sessao-vs-token.md"
+            },
+            "rodar": "php Modulo_5/01-limites-sessao-vs-token.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "por que o painel usa sessão e a API usa token, e o que cada um protege — incluindo session fixation e o logout que só parece logout."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-05-auth/02-access-refresh-tokens",
+            "modulo": 5,
+            "numero": "02",
+            "slug": "access-refresh-tokens",
+            "titulo": "Access token + refresh token",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-05-auth/02-access-refresh-tokens",
+            "arquivos": {
+                "codigo": "Modulo_5/02-access-refresh-tokens.php",
+                "nota": "Modulo_5/02-access-refresh-tokens.md"
+            },
+            "rodar": "php Modulo_5/02-access-refresh-tokens.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "token opaco guardado como hash, rotação do refresh e logout que revoga no servidor — cada armadilha da aula reproduzida."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-05-auth/03-papeis-permissoes",
+            "modulo": 5,
+            "numero": "03",
+            "slug": "papeis-permissoes",
+            "titulo": "Papéis e permissões: admin, vendedor, leitura",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-05-auth/03-papeis-permissoes",
+            "arquivos": {
+                "codigo": "Modulo_5/03-papeis-permissoes.php",
+                "nota": "Modulo_5/03-papeis-permissoes.md"
+            },
+            "rodar": "php Modulo_5/03-papeis-permissoes.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "a matriz do Gate aplicada DE VERDADE nas rotas — não só escondendo botão — e a diferença entre 401 e 403."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-05-auth/04-reset-senha-email",
+            "modulo": 5,
+            "numero": "04",
+            "slug": "reset-senha-email",
+            "titulo": "Reset de senha por e-mail",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-05-auth/04-reset-senha-email",
+            "arquivos": {
+                "codigo": "Modulo_5/04-reset-senha-email.php",
+                "nota": "Modulo_5/04-reset-senha-email.md"
+            },
+            "rodar": "php Modulo_5/04-reset-senha-email.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "os 3 passos do fluxo e o jeito errado de fazer cada um — user enumeration, token adivinhável/reutilizável e sessão do invasor viva."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-05-auth/05-rate-limit-rotas",
+            "modulo": 5,
+            "numero": "05",
+            "slug": "rate-limit-rotas",
+            "titulo": "Rate limit em rotas sensíveis",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-05-auth/05-rate-limit-rotas",
+            "arquivos": {
+                "codigo": "Modulo_5/05-rate-limit-rotas.php",
+                "nota": "Modulo_5/05-rate-limit-rotas.md"
+            },
+            "rodar": "php Modulo_5/05-rate-limit-rotas.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "janela fixa bloqueando força bruta, por que a chave é email+IP, e o Retry-After que a maioria esquece."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-05-auth/06-auditoria",
+            "modulo": 5,
+            "numero": "06",
+            "slug": "auditoria",
+            "titulo": "Auditoria: quem fez o quê",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-05-auth/06-auditoria",
+            "arquivos": {
+                "codigo": "Modulo_5/06-auditoria.php",
+                "nota": "Modulo_5/06-auditoria.md"
+            },
+            "rodar": "php Modulo_5/06-auditoria.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "rastro append-only de ação de negócio, com quem/o quê/quando — e a limpeza de campo sensível antes de gravar."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-06-produto/01-upload-seguro",
+            "modulo": 6,
+            "numero": "01",
+            "slug": "upload-seguro",
+            "titulo": "Upload seguro de anexos",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-06-produto/01-upload-seguro",
+            "arquivos": {
+                "codigo": "Modulo_6/01-upload-seguro.php",
+                "nota": "Modulo_6/01-upload-seguro.md"
+            },
+            "rodar": "php Modulo_6/01-upload-seguro.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "os três ataques da aula sendo barrados — PHP disfarçado de imagem, path traversal e upload incompleto."
+            ]
+        },
+        {
+            "id": "modulo-06-produto/02-filas-jobs",
+            "modulo": 6,
+            "numero": "02",
+            "slug": "filas-jobs",
+            "titulo": "Filas e jobs (e-mail, relatórios)",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-06-produto/02-filas-jobs",
+            "arquivos": {
+                "codigo": "Modulo_6/02-filas-jobs.php",
+                "nota": "Modulo_6/02-filas-jobs.md"
+            },
+            "rodar": "php Modulo_6/02-filas-jobs.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "ciclo pendente->concluido, retry com backoff, dead-letter e idempotência — tudo com a fila de tabela, sem Redis."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-06-produto/03-logs-estruturados",
+            "modulo": 6,
+            "numero": "03",
+            "slug": "logs-estruturados",
+            "titulo": "Logs estruturados",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-06-produto/03-logs-estruturados",
+            "arquivos": {
+                "codigo": "Modulo_6/03-logs-estruturados.php",
+                "nota": "Modulo_6/03-logs-estruturados.md"
+            },
+            "rodar": "php Modulo_6/03-logs-estruturados.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "JSON Lines pesquisável, contexto que torna o log útil, e o filtro que impede segredo de ir para o disco."
+            ]
+        },
+        {
+            "id": "modulo-06-produto/04-notificacoes-lembretes",
+            "modulo": 6,
+            "numero": "04",
+            "slug": "notificacoes-lembretes",
+            "titulo": "Notificações e lembretes (agenda do CRM)",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-06-produto/04-notificacoes-lembretes",
+            "arquivos": {
+                "codigo": "Modulo_6/04-notificacoes-lembretes.php",
+                "nota": "Modulo_6/04-notificacoes-lembretes.md"
+            },
+            "rodar": "php Modulo_6/04-notificacoes-lembretes.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "UTC no banco + conversão na exibição, cron idempotente e o lembrete atrasado que não some."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-06-produto/05-exportacao-csv-pdf",
+            "modulo": 6,
+            "numero": "05",
+            "slug": "exportacao-csv-pdf",
+            "titulo": "Exportação CSV e PDF",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-06-produto/05-exportacao-csv-pdf",
+            "arquivos": {
+                "codigo": "Modulo_6/05-exportacao-csv-pdf.php",
+                "nota": "Modulo_6/05-exportacao-csv-pdf.md"
+            },
+            "rodar": "php Modulo_6/05-exportacao-csv-pdf.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "streaming linha a linha, BOM UTF-8, o corte síncrono/fila e a restrição por papel."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-06-produto/06-soft-delete-busca",
+            "modulo": 6,
+            "numero": "06",
+            "slug": "soft-delete-busca",
+            "titulo": "Soft delete e busca",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-06-produto/06-soft-delete-busca",
+            "arquivos": {
+                "codigo": "Modulo_6/06-soft-delete-busca.php",
+                "nota": "Modulo_6/06-soft-delete-busca.md"
+            },
+            "rodar": "php Modulo_6/06-soft-delete-busca.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "exclusão reversível, lixeira, busca respeitando o filtro, e a armadilha do UNIQUE com soft delete."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-07-producao/01-env-secrets-config",
+            "modulo": 7,
+            "numero": "01",
+            "slug": "env-secrets-config",
+            "titulo": ".env, secrets e config por ambiente",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-07-producao/01-env-secrets-config",
+            "arquivos": {
+                "codigo": "Modulo_7/01-env-secrets-config.php",
+                "nota": "Modulo_7/01-env-secrets-config.md"
+            },
+            "rodar": "php Modulo_7/01-env-secrets-config.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "config centralizada, o bug clássico de \"false\" truthy, e o .env.example em sincronia com o .env real."
+            ]
+        },
+        {
+            "id": "modulo-07-producao/02-migracoes-banco",
+            "modulo": 7,
+            "numero": "02",
+            "slug": "migracoes-banco",
+            "titulo": "Migrações de banco",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-07-producao/02-migracoes-banco",
+            "arquivos": {
+                "codigo": "Modulo_7/02-migracoes-banco.php",
+                "nota": "Modulo_7/02-migracoes-banco.md"
+            },
+            "rodar": "php Modulo_7/02-migracoes-banco.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "as três propriedades de uma migração (versionada, rastreada, reversível) e o commit implícito do MySQL que quebra o runner da aula."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-07-producao/03-staging-vs-producao",
+            "modulo": 7,
+            "numero": "03",
+            "slug": "staging-vs-producao",
+            "titulo": "Staging vs produção",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-07-producao/03-staging-vs-producao",
+            "arquivos": {
+                "codigo": "Modulo_7/03-staging-vs-producao.php",
+                "nota": "Modulo_7/03-staging-vs-producao.md"
+            },
+            "rodar": "php Modulo_7/03-staging-vs-producao.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": false,
+                "observacao": "ambiente único — ver .md"
+            },
+            "demonstra": [
+                "APP_ENV mudando o comportamento de erro, o checklist versionado e a anonimização — e declara honestamente o que ainda NÃO existe."
+            ]
+        },
+        {
+            "id": "modulo-07-producao/04-deploy-https",
+            "modulo": 7,
+            "numero": "04",
+            "slug": "deploy-https",
+            "titulo": "Deploy (VPS ou hospedagem avançada) + HTTPS",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-07-producao/04-deploy-https",
+            "arquivos": {
+                "codigo": "Modulo_7/04-deploy-https.php",
+                "nota": "Modulo_7/04-deploy-https.md"
+            },
+            "rodar": "php Modulo_7/04-deploy-https.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": false,
+                "observacao": "sem servidor — ver .md"
+            },
+            "demonstra": [
+                "o que o document root expõe se for apontado errado, e os arquivos de deploy versionados no projeto."
+            ]
+        },
+        {
+            "id": "modulo-07-producao/05-backup-health-rollback",
+            "modulo": 7,
+            "numero": "05",
+            "slug": "backup-health-rollback",
+            "titulo": "Backup, health check e rollback",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-07-producao/05-backup-health-rollback",
+            "arquivos": {
+                "codigo": "Modulo_7/05-backup-health-rollback.php",
+                "nota": "Modulo_7/05-backup-health-rollback.md"
+            },
+            "rodar": "php Modulo_7/05-backup-health-rollback.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "backup gerado E RESTAURADO de verdade (com o RTO medido), health check que checa dependência, e a diferença entre rollback de código e de banco."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-07-producao/06-observabilidade-minima",
+            "modulo": 7,
+            "numero": "06",
+            "slug": "observabilidade-minima",
+            "titulo": "Observabilidade mínima",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-07-producao/06-observabilidade-minima",
+            "arquivos": {
+                "codigo": "Modulo_7/06-observabilidade-minima.php",
+                "nota": "Modulo_7/06-observabilidade-minima.md"
+            },
+            "rodar": "php Modulo_7/06-observabilidade-minima.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o alerta de taxa de erro rodando de verdade sobre o log JSON Lines, e a rotação que impede o disco de encher."
+            ]
+        },
+        {
+            "id": "modulo-08-final/01-planos-limites",
+            "modulo": 8,
+            "numero": "01",
+            "slug": "planos-limites",
+            "titulo": "Planos, limites e \"access granted\"",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-08-final/01-planos-limites",
+            "arquivos": {
+                "codigo": "Modulo_8/01-planos-limites.php",
+                "nota": "Modulo_8/01-planos-limites.md"
+            },
+            "rodar": "php Modulo_8/01-planos-limites.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "limite checado nos DOIS pontos de entrada, grace period e a diferença entre papel e plano."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-08-final/02-checkout-webhooks",
+            "modulo": 8,
+            "numero": "02",
+            "slug": "checkout-webhooks",
+            "titulo": "Checkout conceitual, gateway e webhooks",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-08-final/02-checkout-webhooks",
+            "arquivos": {
+                "codigo": "Modulo_8/02-checkout-webhooks.php",
+                "nota": "Modulo_8/02-checkout-webhooks.md"
+            },
+            "rodar": "php Modulo_8/02-checkout-webhooks.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "assinatura HMAC barrando payload forjado, idempotência garantida pelo banco, e por que o redirect pós-checkout não libera acesso."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-08-final/03-dominio-email-suporte",
+            "modulo": 8,
+            "numero": "03",
+            "slug": "dominio-email-suporte",
+            "titulo": "Domínio, e-mail profissional e suporte",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-08-final/03-dominio-email-suporte",
+            "arquivos": {
+                "codigo": "Modulo_8/03-dominio-email-suporte.php",
+                "nota": "Modulo_8/03-dominio-email-suporte.md"
+            },
+            "rodar": "php Modulo_8/03-dominio-email-suporte.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": false,
+                "observacao": "sem domínio — plano em docs/"
+            },
+            "demonstra": [
+                "o remetente trocável por config, o Reply-To apontando para suporte, e o plano de DNS escrito em vez de fingido."
+            ]
+        },
+        {
+            "id": "modulo-08-final/04-hardening-final",
+            "modulo": 8,
+            "numero": "04",
+            "slug": "hardening-final",
+            "titulo": "Hardening final",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-08-final/04-hardening-final",
+            "arquivos": {
+                "codigo": "Modulo_8/04-hardening-final.php",
+                "nota": "Modulo_8/04-hardening-final.md"
+            },
+            "rodar": "php Modulo_8/04-hardening-final.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o checklist inteiro VERIFICADO no código, não conferido de memória."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-08-final/05-projeto-final-rubrica",
+            "modulo": 8,
+            "numero": "05",
+            "slug": "projeto-final-rubrica",
+            "titulo": "Projeto final: rubrica de entrega",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-08-final/05-projeto-final-rubrica",
+            "arquivos": {
+                "codigo": "Modulo_8/05-projeto-final-rubrica.php",
+                "nota": "Modulo_8/05-projeto-final-rubrica.md"
+            },
+            "rodar": "php Modulo_8/05-projeto-final-rubrica.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "a rubrica conferida CONTRA o projeto — cada linha com evidência verificável, e as pendências declaradas em vez de marcadas como feitas."
+            ],
+            "rodar_observacao": "precisa do banco"
+        },
+        {
+            "id": "modulo-08-final/06-roadmap-phppro",
+            "modulo": 8,
+            "numero": "06",
+            "slug": "roadmap-phppro",
+            "titulo": "Roadmap: o que vem no PHPPRO",
+            "url": "https://cursos.asllanmaciel.com.br/curso/phpan/aula/modulo-08-final/06-roadmap-phppro",
+            "arquivos": {
+                "codigo": "Modulo_8/06-roadmap-phppro.php",
+                "nota": "Modulo_8/06-roadmap-phppro.md"
+            },
+            "rodar": "php Modulo_8/06-roadmap-phppro.php",
+            "status": {
+                "assistida": true,
+                "anotada": true,
+                "praticada": true,
+                "observacao": null
+            },
+            "demonstra": [
+                "o que ficou de fora COM CONSCIÊNCIA, com evidência no repositório — e o sinal mensurável de cada adiamento."
+            ]
+        }
+    ]
+}
